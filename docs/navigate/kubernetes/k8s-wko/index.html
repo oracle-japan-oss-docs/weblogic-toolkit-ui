@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="Install the WebLogic Kubernetes Operator in the target Kubernetes cluster." name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>WebLogic Kubernetes Operator :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.cxBaP" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.3t7iAC" title="原文 :  About the WKT UI Application "><a href="../../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1F6RvT"  title="原文::  Get Started "><a href="../../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.1ddh3l"  title="原文::  Prerequisites "><a href="../../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.4Q4vj3" title="原文 :  Install WKT UI "><a href="../../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.2XQTja" title="原文 :  Navigate the UI "><a href="../../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.4Ha16W"  title="原文::  Project Settings "><a href="../../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.4YNSyK"  title="原文::  Model "><a href="../../model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.47JMGa"  title="原文::  Image "><a href="../../image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.Y6Pqd"  title="原文::  Kubernetes "><a href="../index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.1HAPv1"  title="原文::  Client Configuration "><a href="../k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.owiuJ"  title="原文::  WebLogic Kubernetes Operator "><a href="index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.3RGRku"  title="原文::  WebLogic Domain "><a href="../k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.13AO1u"  title="原文::  Ingress Controller "><a href="../k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.3NgGix"  title="原文::  Verrazzano "><a href="../../verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.2NQ4QF"  title="原文::  Client Configuration "><a href="../../verrazzano/vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3zhEZq"  title="原文::  Installation "><a href="../../verrazzano/vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.3c1YBT"  title="原文::  Component "><a href="../../verrazzano/vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.4NqhrL"  title="原文::  Application "><a href="../../verrazzano/vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.42UaWa"  title="原文::  Release Notes "><a href="../../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.21noUk"  title="原文::  Release 1.1.1 "><a href="../../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1kxXDU" title="原文 :  Release 1.1.0 "><a href="../../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.BccHo" title="原文 :  Release 1.2.0 "><a href="../../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.GeVih" title="原文 :  &gt; Navigate the UI &gt; Kubernetes &gt; WebLogic Kubernetes Operator "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>UIのナビゲート</a> > <a href='../index.html'>Kubernetes</a> > WebLogic Kubernetes Operator</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.4FVNbw"  title="原文:: WebLogic Kubernetes Operator"><a href="index.html#weblogic-kubernetes-operator">WebLogic Kubernetes Operator</a></span></li>
+        <li><span class="merged" id="index.3vxsi"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+        <li><span class="merged" id="index.umgfh"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+        <li><span class="merged" id="index.1TM2xx" title="原文 : Install Operator"><a href="index.html#install-operator">インストール・オペレータ</a></span></li>
+        <li><span class="merged" id="index.2HE3vR" title="原文 : Update Operator"><a href="index.html#update-operator">更新オペレータ</a></span></li>
+        <li><span class="merged" id="index.3f2jOW" title="原文 : Uninstall Operator"><a href="index.html#uninstall-operator">オペレータのアンインストール</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.27JERd"  title="原文:: WebLogic Kubernetes Operator">WebLogic Kubernetes Operator</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.4FVNbw.1"  title="原文:: WebLogic Kubernetes Operator"><a href="index.html#weblogic-kubernetes-operator">WebLogic Kubernetes Operator</a></span></li>
+<li><span class="merged" id="index.3vxsi.1"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span>
+<ul>
+<li><span class="merged" id="index.4PPnq6" title="原文 : WebLogic Kubernetes Operator Image"><a href="index.html#weblogic-kubernetes-operator-image">WebLogic Kubernetes Operatorイメージ</a></span></li>
+<li><span class="merged" id="index.1DleIo"  title="原文:: Image Pull Secret"><a href="index.html#image-pull-secret">イメージ・プル・シークレット</a></span></li>
+<li><span class="merged" id="index.3yUYA" title="原文 : Kubernetes Namespace Selection Strategy"><a href="index.html#kubernetes-namespace-selection-strategy">Kubernetesネームスペースの選択戦略</a></span></li>
+<li><span class="merged" id="index.2G60cc" title="原文 : WebLogic Kubernetes Operator Role Bindings"><a href="index.html#weblogic-kubernetes-operator-role-bindings">WebLogic Kubernetes Operatorロール・バインディング</a></span></li>
+<li><span class="merged" id="index.IBxl" title="原文 : External REST API Access"><a href="index.html#external-rest-api-access">外部REST APIアクセス</a></span></li>
+<li><span class="merged" id="index.2G72rm" title="原文 : Third Party Integrations"><a href="index.html#third-party-integrations">サード・パーティの統合</a></span></li>
+<li><span class="merged" id="index.mtApF"  title="原文:: Java Logging"><a href="index.html#java-logging">Javaロギング</a></span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.umgfh.1"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+<li><span class="merged" id="index.1TM2xx.1" title="原文 : Install Operator"><a href="index.html#install-operator">インストール・オペレータ</a></span></li>
+<li><span class="merged" id="index.2HE3vR.1" title="原文 : Update Operator"><a href="index.html#update-operator">更新オペレータ</a></span></li>
+<li><span class="merged" id="index.3f2jOW.1" title="原文 : Uninstall Operator"><a href="index.html#uninstall-operator">オペレータのアンインストール</a></span></li>
+</ul>
+<h3 id="weblogic-kubernetes-operator"><span class="merged" id="index.27JERd.1"  title="原文:: WebLogic Kubernetes Operator">WebLogic Kubernetes Operator</span></h3>
+<p><span class="merged" id="index.hGDEI.spl1" title="原文 : This section provides support for installing the WebLogic Kubernetes Operator (the &ldquo;operator&rdquo;) in the target Kubernetes cluster.">この項では、ターゲットのKubernetesクラスタにWebLogic Kubernetes Operator (オペレータ)をインストールするサポートを提供します。</span> <span class="merged" id="index.hGDEI.spl2" title="原文 : For detailed information about the operator, see the WebLogic Kubernetes Operator documentation.">オペレータの詳細は、<a href="https://oracle.github.io/weblogic-kubernetes-operator/">WebLogic Kubernetes Operator</a>のドキュメントを参照してください。</span> </p>
+<h3 id="design-view"><span class="merged" id="index.4fUZXo"  title="原文:: Design View"> 設計ビュー</span></h3>
+<p><span class="merged" id="index.8wJAN.spl1" title="原文 : Design View helps you specify the necessary data needed to install the WebLogic Kubernetes Operator to manage WebLogic domains in one or more Kubernetes namespaces."><code>Design View</code>は、1つ以上のKubernetesネームスペースでWebLogicドメインを管理するためにWebLogic Kubernetes Operatorをインストールするために必要なデータを指定するのに役立ちます。</span> <span class="merged" id="index.8wJAN.spl2" title="原文 : To install the operator using the default settings, simply provide values for the following three fields:">デフォルト設定を使用してオペレータをインストールするには、次の3つのフィールドに値を指定します:</span> </p>
+<ul>
+<li><span class="merged" id="index.49kx45" title="原文 : Kubernetes Namespace - The Kubernetes namespace to which to install the operator."><code>Kubernetes Namespace</code> - オペレータをインストールするKubernetesネームスペース。</span></li>
+<li><span class="merged" id="index.1ru30F" title="原文 : Kubernetes Service Account - The Kubernetes service account for the operator to use when making Kubernetes API requests."><code>Kubernetes Service Account</code> - Kubernetes APIリクエストの作成時に使用するオペレータのKubernetesサービス・アカウント。</span></li>
+<li><span class="merged" id="index.3NfZUS" title="原文 : Helm Release Name to Use for Operator Installation - The Helm release name to use to identify this installation."><code>Helm Release Name to Use for Operator Installation</code> - このインストールを識別するために使用するHelmリリース名。</span></li>
+</ul>
+
+<div class="notices note" ><p><span class="merged" id="index.3C41kQ.spl1" title="原文 : The WKT UI application overrides a few default values in the operator Helm Chart.">WKT UIアプリケーションは、オペレータHelmチャートのいくつかのデフォルト値をオーバーライドします。</span> <span class="merged" id="index.3C41kQ.spl2" title="原文 : Read the details of the parameters descriptions in Kubernetes Namespace Selection Strategy."><a href="index.html#kubernetes-namespace-selection-strategy">「Kubernetesネームスペースの選択戦略」</a>のパラメータの説明の詳細を参照してください。</span> <span class="merged" id="index.3C41kQ.spl3" title="原文 : These panes and their fields are made visible by expanding the Advanced portion of the page.">これらのペインとそのフィールドは、ページの<code>Advanced</code>部分を展開して表示されます。</span> </p>
+</div>
+
+<h4 id="weblogic-kubernetes-operator-image"><span class="merged" id="index.15oKIt" title="原文 : WebLogic Kubernetes Operator Image">WebLogic Kubernetes Operatorイメージ</span></h4>
+<p><span class="merged" id="index.2RlgNP.spl1" title="原文 : By default, the operator&rsquo;s Image Tag to Use field is set to the image tag corresponding to the latest operator release version on the GitHub Container Registry.">デフォルトでは、オペレータの<code>Image Tag to Use</code>フィールドは、GitHubコンテナ・レジストリの最新のオペレータ・リリース・バージョンに対応するイメージ・タグに設定されます。</span> <span class="merged" id="index.2RlgNP.spl2" title="原文 : The Image Pull Policy field configures the operator deployment in Kubernetes to tell it when to pull the image from the specified registry:"><code>Image Pull Policy</code>フィールドは、指定したレジストリからイメージをいつプルするかを示すように、Kubernetesのオペレータ・デプロイメントを構成します:</span> </p>
+<ul>
+<li><span class="merged" id="index.2Fe7mf" title="原文 : If Not Present (default) - Only pull the image if it is not already present on the Kubernetes node."><code>If Not Present</code> (default) - イメージがKubernetesノードに存在しない場合のみプルします。</span></li>
+<li><span class="merged" id="index.AeSpe" title="原文 : Always - Pull the image every time the image is needed to start a container."><code>Always</code> - コンテナを起動するためにイメージが必要なたびにイメージをプルします。</span></li>
+<li><span class="merged" id="index.3Mkcvg" title="原文 : Never - Never pull the image; this will result in an error if the image is not already present on the Kubernetes node."><code>Never</code> - イメージをプルしないでください。イメージがKubernetesノードにまだ存在しない場合、エラーが発生します。</span></li>
+</ul>
+<p><span class="merged" id="index.10Cj2q.spl1" title="原文 : Because the GitHub Container Registry does not require image pull authentication to pull the official WebLogic Kubernetes Operator image, Image Pull Requires Authentication is disabled by default.">GitHubコンテナ・レジストリでは、公式のWebLogic Kubernetes Operatorイメージをプルするためにイメージ・プル認証を必要としないため、<code>Image Pull Requires Authentication</code>はデフォルトで無効になっています。</span> <span class="merged" id="index.10Cj2q.spl2" title="原文 : If a custom operator image is being used from a container image registry that requires pull authentication, then enable the option and complete the appropriate fields described in the Image Pull Secret pane that follows.">プル認証を必要とするコンテナ・イメージ・レジストリからカスタム・オペレータ・イメージが使用されている場合は、オプションを有効にし、次の<a href="index.html#image-pull-secret">「イメージ・プル・シークレット」</a>ペインで説明されている適切なフィールドに入力します。</span> </p>
+<h4 id="image-pull-secret"><span class="merged" id="index.39vt09"  title="原文:: Image Pull Secret">イメージ・プル・シークレット</span></h4>
+<p><span class="merged" id="index.430VaC.spl1" title="原文 : This pane is hidden unless the Image Pull Requires Authentication from the WebLogic Kubernetes Operator Image pane is enabled.">このペインは、WebLogic Kubernetes Operatorイメージ・ペインの<code>Image Pull Requires Authentication</code>が有効になっていないかぎり非表示になります。</span> <span class="merged" id="index.430VaC.spl2" title="原文 : To allow Kubernetes to pull the custom operator image requiring pull authentication, use the Kubernetes Image Pull Secret Name field to provide the name of the Kubernetes secret to use for the credentials.">プル認証が必要なカスタム・オペレータ・イメージをKubernetesがプルできるようにするには、<code>Kubernetes Image Pull Secret Name</code>フィールドを使用して、資格証明に使用するKubernetesシークレットの名前を指定します。</span> <span class="merged" id="index.430VaC.spl3" title="原文 : To have the application create this secret, disable Use Existing Secret and provide the values for the following fields:">アプリケーションでこのシークレットを作成するには、<code>Use Existing Secret</code>を無効にし、次のフィールドの値を指定します:</span> </p>
+<ul>
+<li><span class="merged" id="index.I2YLk" title="原文 : Image Pull Secret Email Address - The email address of the user."><code>Image Pull Secret Email Address</code> - ユーザーの電子メール・アドレス。</span></li>
+<li><span class="merged" id="index.3svOtG" title="原文 : Image Pull Secret Username - The user name to use when authenticating to the container image registry."><code>Image Pull Secret Username</code> - コンテナ・イメージ・レジストリへの認証時に使用するユーザー名。</span></li>
+<li><span class="merged" id="index.fqomw" title="原文 : Image Pull Secret Password - The user&rsquo;s password to use when authenticating to the container image registry."><code>Image Pull Secret Password</code> - コンテナ・イメージ・レジストリへの認証時に使用するユーザー・パスワード。</span></li>
+</ul>
+<p><span class="merged" id="index.QK1GS.spl1" title="原文 : The read-only Image Registry Address field is parsed from the Image Tag to Use field.">読取り専用<code>Image Registry Address</code>フィールドは、<code>Image Tag to Use</code>フィールドから解析されます。</span> <span class="merged" id="index.QK1GS.spl2" title="原文 : If the Image Registry Address field is empty, then the application will assume that Docker Hub is the target container image registry to use when creating the pull secret."><code>Image Registry Address</code>フィールドが空の場合、アプリケーションはDockerハブがプル・シークレットの作成時に使用するターゲット・コンテナ・イメージ・レジストリであると想定します。</span> </p>
+<h4 id="kubernetes-namespace-selection-strategy"><span class="merged" id="index.3tXQDb" title="原文 : Kubernetes Namespace Selection Strategy">Kubernetesネームスペースの選択戦略</span></h4>
+<p><span class="merged" id="index.2knAL3.spl1" title="原文 : The operator needs to know which WebLogic domains in the Kubernetes cluster that it will manage.">オペレータは、管理するKubernetesクラスタ内のWebLogicドメインを認識する必要があります。</span> <span class="merged" id="index.2knAL3.spl2" title="原文 : It does this at the Kubernetes namespace level, so any WebLogic domain in a Kubernetes namespace the operator is configured to manage, will be managed by the operator instance being installed.">これはKubernetesネームスペース・レベルで行われるため、オペレータが管理するように構成されているKubernetesネームスペース内のWebLogicドメインは、インストールされるオペレータ・インスタンスによって管理されます。</span> <span class="merged" id="index.2knAL3.spl3" title="原文 : Use the Kubernetes Namespace Selection Strategy field to choose the desired namespace selection strategy from one of the supported values:"><code>Kubernetes Namespace Selection Strategy</code>フィールドを使用して、サポートされている値のいずれかから必要なネームスペース選択戦略を選択します:</span> </p>
+<ul>
+<li><span class="merged" id="index.2DV3uY" title="原文 : Label Selector (default) - Any Kubernetes namespace with a specified label will be managed by this operator."><code>Label Selector</code> (default) - 指定されたラベルを持つKubernetesネームスペースは、このオペレータによって管理されます。</span></li>
+<li><span class="merged" id="index.11IREp" title="原文 : List - Any Kubernetes namespace in the provided list will be managed by this operator."><code>List</code> - 指定されたリストのKubernetesネームスペースは、このオペレータによって管理されます。</span></li>
+<li><span class="merged" id="index.1hZ7Dr" title="原文 : Regular Expression - Any Kubernetes namespace whose name matches the provided regular expression will be managed by this operator."><code>Regular Expression</code> - 指定された正規表現に一致する名前を持つKubernetesネームスペースはすべて、このオペレータによって管理されます。</span></li>
+<li><span class="merged" id="index.eg73I" title="原文 : Dedicated - Only the Kubernetes namespace where the operator is installed will be managed by this operator."><code>Dedicated</code> - オペレータがインストールされているKubernetesネームスペースのみが、このオペレータによって管理されます。</span></li>
+</ul>
+<p><span class="merged" id="index.1rk9fR" title="原文 : Note that the operator Helm chart default is List but the application overrides this to specify Label Selector as the default value."><em><strong>ノート</strong> オペレータHelmチャートのデフォルトが<code>List</code>ですが、アプリケーションによってこれがオーバーライドされ、デフォルト値として<code>Label Selector</code>が指定されます。</em></span></p>
+<p><span class="merged" id="index.YShSH" title="原文 : Each namespace selection strategy takes different input values; the form fields will change based on the strategy selected:">各ネームスペース選択戦略には異なる入力値が使用されます。フォーム・フィールドは、選択した戦略に基づいて変化します:</span></p>
+<ul>
+<li><span class="merged" id="index.28F6BV" title="原文 : When using the Label Selector strategy, the Kubernetes Namespace Label Selector field will appear with a default value that aligns with the Helm chart default value."><code>Label Selector</code>戦略を使用すると、<code>Kubernetes Namespace Label Selector</code>フィールドに、Helmチャートのデフォルト値と一致するデフォルト値が表示されます。</span></li>
+<li><span class="merged" id="index.3u1wSL" title="原文 : The Regular Expression strategy uses the required Kubernetes Namespaces Regular Expression field to specify the regular expression to use for matching the Kubernetes namespaces that the operator should manage."><code>Regular Expression</code>戦略では、必要な<code>Kubernetes Namespaces Regular Expression</code>フィールドを使用して、オペレータで管理するKubernetesネームスペースの照合に使用する正規表現を指定します。</span></li>
+<li><span class="merged" id="index.M9WGH" title="原文 : Selecting the List strategy will cause the Kubernetes Namespaces to Manage field to appear with a list containing the default namespace; this aligns with the default value in the Helm chart."><code>List</code>戦略を選択すると、<code>Kubernetes Namespaces to Manage</code>フィールドが<code>default</code>ネームスペースを含むリストとともに表示されます。これは、Helmチャートのデフォルト値と一致します。</span>
+<ul>
+<li><span class="merged" id="index.1M5yu" title="原文 : Removing the default namespace is fine and will result in an empty list."><code>default</code>ネームスペースの削除は問題なく、空のリストになります。</span></li>
+<li><span class="merged" id="index.20IeCu.spl1" title="原文 : Note that when deploying the domain with an operator using the List strategy, the application will automatically add the new domain&rsquo;s Kubernetes namespace to the list specified list, if needed."><code>List</code>戦略を使用してオペレータを使用してドメインをデプロイする場合、アプリケーションは必要に応じて、新しいドメインのKubernetesネームスペースを指定されたリストに自動的に追加します。</span> <span class="merged" id="index.20IeCu.spl2" title="原文 : As such, specifying an empty list will not prevent your WebLogic domain from being managed by the operator.">そのため、空のリストを指定しても、WebLogicドメインがオペレータによって管理されることはありません。</span> </li>
+</ul>
+</li>
+<li><span class="merged" id="index.3fBe4a" title="原文 : Dedicated is self-defining so no additional fields are necessary."><code>Dedicated</code>は自己定義であるため、追加フィールドは不要です。</span></li>
+</ul>
+<h4 id="weblogic-kubernetes-operator-role-bindings"><span class="merged" id="index.tmh6b" title="原文 : WebLogic Kubernetes Operator Role Bindings">WebLogic Kubernetes Operatorロール・バインディング</span></h4>
+<p><span class="merged" id="index.3tRD5h.spl1" title="原文 : When installing the operator, the operator Helm chart default is to create a Kubernetes Role and a Kubernetes RoleBinding in each Kubernetes namespace being managed by the operator.">オペレータをインストールする場合、オペレータHelmチャートのデフォルトは、オペレータによって管理される各KubernetesネームスペースにKubernetesロールおよびKubernetes RoleBindingを作成することです。</span> <span class="merged" id="index.3tRD5h.spl2" title="原文 : By enabling Enable Cluster Role Binding, the operator installation will create a Kubernetes ClusterRole and ClusterRoleBinding that the operator will use for all managed namespaces."><code>Enable Cluster Role Binding</code>を有効にすると、オペレータのインストールによって、オペレータがすべての管理対象ネームスペースに使用するKubernetes ClusterRoleおよびClusterRoleBindingが作成されます。</span> <span class="merged" id="index.3tRD5h.spl3" title="原文 : This ClusterRole and ClusterRoleBinding will be shared across all operator installations in the Kubernetes cluster (assuming that those installations also enable cluster role binding).">このClusterRoleおよびClusterRoleBindingは、Kubernetesクラスタ内のすべてのオペレータ・インストールで共有されます(これらのインストールでもクラスタ・ロール・バインディングが有効になっている場合)。</span> </p>
+<p><span class="merged" id="index.48iudB.spl1" title="原文 : Using the default namespace-specific roles and role bindings, the administrator follows the Principle of Least Privilege to guarantee that the operator cannot perform any actions on other, non-managed namespaces.">デフォルトの名前空間固有のロールとロール・バインディングを使用すると、管理者は最小権限の原則に従って、オペレータが他の非管理ネームスペース・アクションを実行できないことを保証します。</span> <span class="merged" id="index.48iudB.spl2" title="原文 : The implication of this configuration is that because the operator service account does not have permission to create roles and role bindings, any new namespace added for the operator to manage does not have the necessary role and role binding needed for the operator to manage the namespace.">この構成の意味は、オペレータ・サービス・アカウントにロールとロール・バインディングを作成する権限がないため、管理するオペレータに追加された新しいネームスペースには、ネームスペースの管理に必要なロールおよびロール・バインディングがないことです。</span> <span class="merged" id="index.48iudB.spl3" title="原文 : Rerunning the operator Helm chart with the operator configured to manage the new namespaces will cause the Helm chart to create the necessary Role and RoleBinding objects in each namespace, as needed.">新しいネームスペースを管理するように構成されたオペレータを使用してオペレータHelmチャートを再実行すると、Helmチャートで、必要に応じて各ネームスペースに必要なロール・オブジェクトおよびRoleBindingオブジェクトが作成されます。</span> </p>
+<p><span class="merged" id="index.10yYC8" title="原文 : If the operator is using the ClusterRole and ClusterRoleBinding, then the new namespaces will be automatically picked up by the operator when using either the Label Selector or Regular Expression namespace selection strategy without any need to rerun the operator Helm chart.">オペレータがClusterRoleおよびClusterRoleBindingを使用している場合、オペレータのHelmチャートを再実行する必要なく、<code>Label Selector</code>または<code>Regular Expression</code>のいずれかのネームスペース選択戦略を使用すると、新しいネームスペースがオペレータによって自動的に選択されます。</span></p>
+<p><span class="merged" id="index.2YNXu1" title="原文 : As previously mentioned, the WKT UI application automatically reruns the operator Helm chart when deploying new WebLogic domains to ensure that the new domain&rsquo;s namespace is being managed by the operator.">前述のとおり、WKT UIアプリケーションは、新しいWebLogicドメインをデプロイするときにオペレータHelmチャートを自動的に再実行し、新しいドメインのネームスペースがオペレータによって管理されていることを確認します。</span></p>
+<h4 id="external-rest-api-access"><span class="merged" id="index.2jHJgy" title="原文 : External REST API Access">外部REST APIアクセス</span></h4>
+<p><span class="merged" id="index.45zK16.spl1" title="原文 : By default, the operator&rsquo;s REST API is not exposed outside the Kubernetes cluster.">デフォルトでは、オペレータのREST APIはKubernetesクラスタ外では公開されません。</span> <span class="merged" id="index.45zK16.spl2" title="原文 : To enable the REST API to be exposed, enable Expose REST API Externally, set the desired HTTPS port using the External REST API HTTPS Port field, and name of the Kubernetes TLS secret to use in the External REST API Identity Secret Name field.">REST APIの公開を有効にするには、<code>Expose REST API Externally</code>を有効にし、<code>External REST API HTTPS Port</code>フィールドを使用して目的のHTTPSポートを設定し、<code>External REST API Identity Secret Name</code>フィールドで使用するKubernetes TLSシークレットの名前を設定します。</span> <span class="merged" id="index.45zK16.spl3" title="原文 : For more information, see the WebLogic Kubernetes Operator Rest API documentation.">詳細は、WebLogic Kubernetes Operator <a href="https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-operators/the-rest-api/">Rest API</a>のドキュメントを参照してください。</span> </p>
+<h4 id="third-party-integrations"><span class="merged" id="index.3CyPTk" title="原文 : Third Party Integrations">サード・パーティの統合</span></h4>
+<p><span class="merged" id="index.4YI1oO" title="原文 : To enable integration with the Elasticsearch, Logstash, and Kibana (ELK) stack, enable ELK Integration Enabled and provide values for the following fields.">Elasticsearch、LogstashおよびKibana (ELK)スタックとの統合を有効にするには、<code>ELK Integration Enabled</code>を有効にし、次のフィールドに値を指定します。</span></p>
+<ul>
+<li><span class="merged" id="index.1W3AWR" title="原文 : Logstash Image Tag to Use - The container image of logstash to use."><code>Logstash Image Tag to Use</code> - 使用する<code>logstash</code>のコンテナ・イメージ。</span></li>
+<li><span class="merged" id="index.2chVcy" title="原文 : Elasticsearch Host Name - The DNS name of IP address of the Elasticsearch server."><code>Elasticsearch Host Name</code> - ElasticsearchサーバーのIPアドレスのDNS名。</span></li>
+<li><span class="merged" id="index.3PwV70" title="原文 : Elasticsearch Port - The port number for the Elasticsearch server."><code>Elasticsearch Port</code> - Elasticsearchサーバーのポート番号。</span></li>
+</ul>
+<p><span class="merged" id="index.BSZ6U" title="原文 : For more information, see Elastic Stack integration in the WebLogic Kubernetes Operator documentation.">詳細は、WebLogic Kubernetes Operatorドキュメントの<a href="https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-operators/#optional-elastic-stack-elasticsearch-logstash-and-kibana-integration">「柔軟なスタック統合」</a>を参照してください。</span></p>
+<h4 id="java-logging"><span class="merged" id="index.48CiwK"  title="原文:: Java Logging">Javaロギング</span></h4>
+<p><span class="merged" id="index.1mm4SJ.spl1" title="原文 : This pane lets you override the operator&rsquo;s Java logging configuration, which can be useful when debugging issues with the operator.">このペインでは、オペレータのJavaロギング構成をオーバーライドできます。これは、オペレータの問題をデバッグするときに役立ちます。</span> <span class="merged" id="index.1mm4SJ.spl2" title="原文 : Use the Logging Level field to customize the minimum log level written to the log file."><code>Logging Level</code>フィールドを使用して、ログ・ファイルに書き込まれる最小ログ・レベルをカスタマイズします。</span> <span class="merged" id="index.1mm4SJ.spl3" title="原文 : The Log File Size Limit field sets the maximum size of a single operator log file while the Log File Count limits the maximum number of retained log files."><code>Log File Size Limit</code>フィールドは、1つのオペレータ・ログ・ファイルの最大サイズを設定しますが、<code>Log File Count</code>は保持されるログ・ファイルの最大数を制限します。</span> <span class="merged" id="index.1mm4SJ.spl4" title="原文 : For more information, see Operator Helm configuration values in the WebLogic Kubernetes Operator documentation.">詳細は、WebLogic Kubernetes Operatorドキュメントの<a href="https://oracle.github.io/weblogic-kubernetes-operator/userguide/managing-operators/using-helm/#operator-helm-configuration-values">「オペレータのHelm構成値」</a>を参照してください。</span> </p>
+<h3 id="code-view"><span class="merged" id="index.2f1R4W"  title="原文:: Code View">コード・ビュー</span></h3>
+<p><span class="merged" id="index.2cKaaU" title="原文 : The WebLogic Operator page&rsquo;s Code View displays a shell script that you can use as a starting point for automating the operator installation process."><code>WebLogic Operator</code>ページの<code>Code View</code>には、オペレータのインストール・プロセスを自動化するための開始点として使用できるシェル・スクリプトが表示されます。</span></p>
+<p><span class="merged" id="index.2wVbh4.spl1" title="原文 : If it is not already selected, then use the Script Language drop-down menu to choose the desired scripting language.">まだ選択されていない場合は、<code>Script Language</code>ドロップダウン・メニューを使用して目的のスクリプト言語を選択します。</span> <span class="merged" id="index.2wVbh4.spl2" title="原文 : Note that the application is providing a working sample script to show how the process might be automated.">アプリケーションには、プロセスの自動化方法を示す実用的なサンプル・スクリプトが用意されています。</span> <span class="merged" id="index.2wVbh4.spl3" title="原文 : Before using the script, review the script and make any changes necessary for your environment.">スクリプトを使用する前に、スクリプトを確認し、環境に必要な変更を加えます。</span> <span class="merged" id="index.2wVbh4.spl4" title="原文 : One typical change that would be considered a best practice would be to change the script to accept either command-line arguments or externally set environment variables to specify any credentials required by the script to eliminate hard-coding the credentials in the script itself.">ベスト・プラクティスとみなされる一般的な変更の1つは、スクリプトを変更してコマンドライン引数を受け入れるか、またはスクリプト自体で資格証明をハード・コーディングしないようにスクリプトに必要な資格証明を指定するように環境変数を外部で設定することです。</span> <span class="merged" id="index.2wVbh4.spl5" title="原文 : This change is left as an exercise for you because different environments typically will have existing standards for securely handling such credentials.">通常、このような資格証明を安全に処理するための既存の標準が様々な環境にあるため、この変更は演習として残されます。</span> </p>
+<h3 id="install-operator"><span class="merged" id="index.3M8hm4" title="原文 : Install Operator">インストール・オペレータ</span></h3>
+<p><span class="merged" id="index.3EIDoV.spl1" title="原文 : Install Operator installs the WebLogic Kubernetes Operator in the target Kubernetes cluster."><code>Install Operator</code>は、WebLogic Kubernetes OperatorをターゲットKubernetesクラスタにインストールします。</span> <span class="merged" id="index.3EIDoV.spl2" title="原文 : You access this action by using the Install Operator button on the WebLogic Operator page or the Go &gt; Install WebLogic Kubernetes Operator menu item.">このアクションにアクセスするには、<code>WebLogic Operator</code>ページまたは<code>Go</code> > <code>Install WebLogic Kubernetes Operator</code>メニュー・アイテムの<code>Install Operator</code>ボタンを使用します。</span> </p>
+<p><span class="merged" id="index.2qEAce" title="原文 : At a high level, Install Operator performs the following steps:">上位レベルで、<code>Install Operator</code>は次のステップを実行します:</span></p>
+<ol>
+<li><span class="merged" id="index.1iC2Li" title="原文 : Validates the input values necessary for running the action based on your selections.">選択した内容に基づいて、処理の実行に必要な入力値をバリデートします。</span></li>
+<li><span class="merged" id="index.1LnqA4" title="原文 : Saves the WKT Project, if needed.">必要に応じてWKTプロジェクトを保存します。</span></li>
+<li><span class="merged" id="index.2R8HEL" title="原文 : Creates the Kubernetes namespace for installing the operator, if needed.">必要に応じて、オペレータをインストールするためのKubernetesネームスペースを作成します。</span></li>
+<li><span class="merged" id="index.2ftxHf" title="原文 : Creates the Kubernetes service account for the operator to use, if needed.">必要に応じて、オペレータに使用するKubernetesサービス・アカウントを作成します。</span></li>
+<li><span class="merged" id="index.1uCZSq" title="原文 : Creates the operator image pull secret, if needed.">必要に応じて、オペレータ・イメージのプル・シークレットを作成します。</span></li>
+<li><span class="merged" id="index.1VXoeI" title="原文 : Adds the latest operator Helm chart to the local Helm repository.">最新のオペレータHelmチャートをローカルのHelmリポジトリに追加します。</span></li>
+<li><span class="merged" id="index.1woemx" title="原文 : Runs Helm to install the operator using the specified configuration.">Helmを実行して、指定した構成を使用してオペレータをインストールします。</span></li>
+</ol>
+<h3 id="update-operator"><span class="merged" id="index.1PbjvY" title="原文 : Update Operator">更新オペレータ</span></h3>
+<p><span class="merged" id="index.4W0Xp3.spl1" title="原文 : Update Operator updates the settings on a running WebLogic Kubernetes Operator by using the helm upgrade command."><code>Update Operator</code>は、<code>helm upgrade</code>コマンドを使用して、実行中のWebLogic Kubernetes Operatorの設定を更新します。</span> <span class="merged" id="index.4W0Xp3.spl2" title="原文 : You access this action by using the Update Operator button on the WebLogic Operator page or the Go &gt; Update WebLogic Kubernetes Operator menu item.">このアクションにアクセスするには、<code>WebLogic Operator</code>ページまたは<code>Go</code> > <code>Update WebLogic Kubernetes Operator</code>メニュー・アイテムの<code>Update Operator</code>ボタンを使用します。</span> </p>
+<p><span class="merged" id="index.2ntLdw.spl1" title="原文 : Update Operator applies all the changes to the operator that you have specified on the page."><code>Update Operator</code>は、ページで指定したオペレータに対するすべての変更を適用します。</span> <span class="merged" id="index.2ntLdw.spl2" title="原文 : For example, you can change the operator image version, the domain namespace selection strategy, Java logging level, or the value of any field in the WebLogic Kubernetes Operator section.">たとえば、オペレータ・イメージ・バージョン、ドメイン・ネームスペース選択戦略、Javaロギング・レベルまたはWebLogic Kubernetes Operatorセクションの任意のフィールドの値を変更できます。</span> </p>
+<h3 id="uninstall-operator"><span class="merged" id="index.1wBnEY" title="原文 : Uninstall Operator">オペレータのアンインストール</span></h3>
+<p><span class="merged" id="index.QmQaR.spl1" title="原文 : Uninstall Operator uses the helm uninstall command to remove the WebLogic Kubernetes Operator and its associated resources from the Kubernetes cluster."><code>Uninstall Operator</code>は、<code>helm uninstall</code>コマンドを使用して、WebLogic Kubernetes Operatorとその関連リソースをKubernetesクラスタから削除します。</span> <span class="merged" id="index.QmQaR.spl2" title="原文 : In addition, you can choose whether to also delete the corresponding namespace.">また、対応するネームスペースを削除するかどうかも選択できます。</span> <span class="merged" id="index.QmQaR.spl3" title="原文 : You access these actions by using the Uninstall Operator button on the WebLogic Operator page or the Go &gt; Uninstall WebLogic Kubernetes Operator menu item.">これらのアクションにアクセスするには、<code>WebLogic Operator</code>ページまたは<code>Go</code> > <code>Uninstall WebLogic Kubernetes Operator</code>メニュー・アイテムの<code>Uninstall Operator</code>ボタンを使用します。</span> </p>
+<p><span class="merged" id="index.1pWedO" title="原文 : Note that if you uninstall an operator, then any domains that it is managing will continue running; however, any changes to a domain resource that was managed by the operator will not be detected or automatically handled, and, if you want to clean up such a domain, then you will need to manually delete all of the domain&rsquo;s resources (domain, pods, services, and such).">オペレータをアンインストールした場合、そのオペレータが管理しているドメインは引き続き実行されますが、オペレータが管理していたドメイン・リソースに対する変更は行われません。検出または自動的に処理され、このようなドメインをクリーンアップする場合は、ドメインのすべてのリソース(ドメイン、ポッド、サービスなど)を手動で削除する必要があります。</span></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../k8s-client-config/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../k8s-weblogic-domain/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../../js/learn.js?1667188184"></script>
+    <script src="../../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

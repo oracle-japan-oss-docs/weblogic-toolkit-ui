@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="Define and deploy a Verrazzano application." name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>アプリケーション :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.cxBaP" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.3t7iAC" title="原文 :  About the WKT UI Application "><a href="../../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1F6RvT"  title="原文::  Get Started "><a href="../../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.1ddh3l"  title="原文::  Prerequisites "><a href="../../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.4Q4vj3" title="原文 :  Install WKT UI "><a href="../../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.2XQTja" title="原文 :  Navigate the UI "><a href="../../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.4Ha16W"  title="原文::  Project Settings "><a href="../../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.4YNSyK"  title="原文::  Model "><a href="../../model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.47JMGa"  title="原文::  Image "><a href="../../image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.4bFxKi"  title="原文::  Kubernetes "><a href="../../kubernetes/index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.xpM4U"  title="原文::  Client Configuration "><a href="../../kubernetes/k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.431Tcs"  title="原文::  WebLogic Kubernetes Operator "><a href="../../kubernetes/k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.21TpbQ"  title="原文::  WebLogic Domain "><a href="../../kubernetes/k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.2KYeay"  title="原文::  Ingress Controller "><a href="../../kubernetes/k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.f5bTs"  title="原文::  Verrazzano "><a href="../index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.2lSDul"  title="原文::  Client Configuration "><a href="../vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3BHtE2"  title="原文::  Installation "><a href="../vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.jXT0A"  title="原文::  Component "><a href="../vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.3fBSuK"  title="原文::  Application "><a href="index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.42UaWa"  title="原文::  Release Notes "><a href="../../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.21noUk"  title="原文::  Release 1.1.1 "><a href="../../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1kxXDU" title="原文 :  Release 1.1.0 "><a href="../../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.BccHo" title="原文 :  Release 1.2.0 "><a href="../../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.1JLq2W" title="原文 :  &gt; Navigate the UI &gt; Verrazzano &gt; Application "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>UIのナビゲート</a> > <a href='../index.html'>Verrazzano</a> > アプリケーション</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.4KG0VR" title="原文 : Verrazzano Application"><a href="index.html#verrazzano-application">Verrazzanoアプリケーション</a></span></li>
+        <li><span class="merged" id="index.3vxsi"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+        <li><span class="merged" id="index.umgfh"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+        <li><span class="merged" id="index.8j2k1"  title="原文:: Deploy Application"><a href="index.html#deploy-application">アプリケーションのデプロイ</a></span></li>
+        <li><span class="merged" id="index.O0sn0"  title="原文:: Undeploy Application"><a href="index.html#undeploy-application">アプリケーションのアンデプロイ</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.dUFt8"  title="原文:: Application">アプリケーション</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.4KG0VR.1" title="原文 : Verrazzano Application"><a href="index.html#verrazzano-application">Verrazzanoアプリケーション</a></span></li>
+<li><span class="merged" id="index.3vxsi.1"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span>
+<ul>
+<li><span class="merged" id="index.1NT3d3"  title="原文:: Components"><a href="index.html#components">コンポーネント</a></span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.umgfh.1"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+<li><span class="merged" id="index.8j2k1.1"  title="原文:: Deploy Application"><a href="index.html#deploy-application">アプリケーションのデプロイ</a></span></li>
+<li><span class="merged" id="index.O0sn0.1"  title="原文:: Undeploy Application"><a href="index.html#undeploy-application">アプリケーションのアンデプロイ</a></span></li>
+</ul>
+<h3 id="verrazzano-application"><span class="merged" id="index.4OBNWu" title="原文 : Verrazzano Application">Verrazzanoアプリケーション</span></h3>
+<p><span class="merged" id="index.Dq3J5.spl1" title="原文 : A Verrazzano application is comprised of Components.">Verrazzanoアプリケーションはコンポーネントで構成されています。</span> <span class="merged" id="index.Dq3J5.spl2"  title="原文: Components encapsulate application implementation details.">Componentは、アプリケーション実装の詳細をカプセル化します。</span> <span class="merged" id="index.Dq3J5.spl3" title="原文 : For detailed information, see Applications in the Verrazzano documentation.">詳細は、Verrazzanoドキュメントの<a href="https://verrazzano.io/latest/docs/applications/">「アプリケーション」</a>を参照してください。</span> </p>
+<p><span class="merged" id="index.1YKWgq" title="原文 : The Application section makes it easy to compose an application that includes the Component for the WebLogic domain."><code>Application</code>セクションでは、WebLogicドメインのコンポーネントを含むアプリケーションを簡単に作成できます。</span></p>
+<h3 id="design-view"><span class="merged" id="index.4fUZXo"  title="原文:: Design View"> 設計ビュー</span></h3>
+<p><span class="merged" id="index.4aJ2cX" title="原文 : Design View provides values for defining the application and customizing it for the target environment."><code>Design View</code>には、アプリケーションを定義してターゲット環境用にカスタマイズするための値を指定します。</span></p>
+<ul>
+<li><span class="merged" id="index.1DuZuG" title="原文 : Application Name - The name of the Verrazzano application."><code>Application Name</code> - Verrazzanoアプリケーションの名前。</span></li>
+<li><span class="merged" id="index.3dMyXZ" title="原文 : Application Namespace - The Kubernetes namespace to which the application will be deployed."><code>Application Namespace</code> - アプリケーションがデプロイされるKubernetesネームスペース。</span></li>
+<li><span class="merged" id="index.2HhGSB" title="原文 : Application Version - The version annotation value to add to the Verrazzano application."><code>Application Version</code> - Verrazzanoアプリケーションに追加するバージョン注釈値。</span></li>
+<li><span class="merged" id="index.4MXJjh" title="原文 : Application Description - The description annotation value to add to the Verrazzano application."><code>Application Description</code> - Verrazzanoアプリケーションに追加する説明注釈の値。</span></li>
+<li><span class="merged" id="index.1pJH0T.spl1" title="原文 : Verrazzano Version - Provide the installed Verrazzano version."><code>Verrazzano Version</code> - インストールされているVerrazzanoバージョンを指定します。</span> <span class="merged" id="index.1pJH0T.spl2" title="原文 : Click the icon to retrieve the value from the environment.">アイコンをクリックして、環境から値を取得します。</span> </li>
+<li><span class="merged" id="index.2hT7UT" title="原文 : Use Multicluster Application - Select whether to make this a multicluster application."><code>Use Multicluster Application</code> - これを多層アプリケーションにするかどうかを選択します。</span>
+<ul>
+<li><span class="merged" id="index.3GMpTv.spl1" title="原文 : Create Verrazzano Project - To deploy a multicluster application, a Verrazzano Project that includes the current application&rsquo;s namespace must exist."><code>Create Verrazzano Project</code> - マルチ・クラスタ・アプリケーションをデプロイするには、現在のアプリケーション・ネームスペースを含むVerrazzanoプロジェクトが存在する必要があります。</span> <span class="merged" id="index.3GMpTv.spl2" title="原文 : Select whether to create a new Verrazzano Project.">新しいVerrazzanoプロジェクトを作成するかどうかを選択します。</span> </li>
+<li><span class="merged" id="index.WH1K2.spl1" title="原文 : Secret Names - The secret names in the current namespace to associate with the application."><code>Secret Names</code> - アプリケーションに関連付ける現在のネームスペースのシークレット名。</span> <span class="merged" id="index.WH1K2.spl2" title="原文 : To edit this field, click Choose Secrets.">このフィールドを編集するには、<code>Choose Secrets</code>をクリックします。</span> </li>
+<li><span class="merged" id="index.Sl06M.spl1" title="原文 : Verrazzano Clusters for Application Placement - The Verrazzano cluster names where the application should be placed."><code>Verrazzano Clusters for Application Placement</code> - アプリケーションを配置するVerrazzanoクラスタ名。</span> <span class="merged" id="index.Sl06M.spl2" title="原文 : To edit this field, click Choose Verrazzano Clusters.">このフィールドを編集するには、<code>Choose Verrazzano Clusters</code>をクリックします。</span> </li>
+</ul>
+</li>
+</ul>
+<h4 id="components"><span class="merged" id="index.2wtiBh"  title="原文:: Components">コンポーネント</span></h4>
+<p><span class="merged" id="index.2It8JG.spl1" title="原文 : You can apply Traits to customize Components for the environment.">特性を適用して、環境のコンポーネントをカスタマイズできます。</span> <span class="merged" id="index.2It8JG.spl2"  title="原文: Traits customize Component workloads and generate related resources during deployment.">Traitは、コンポーネント・ワークロードをカスタマイズし、デプロイメント中に関連リソースを生成します。</span> </p>
+<p><span class="merged" id="index.11JY8b" title="原文 : Use the Add Components button to apply Traits to your application:"><code>Add Components</code>ボタンを使用して、アプリケーションに特性を適用します:</span></p>
+<ul>
+<li><span class="merged" id="index.1dbDGD" title="原文 : Ingress Trait - provides a simplified integration with the Istio Ingress Gateway included in the Verrazzano platform.">イングレス・トレイト - は、Verrazzanoプラットフォームに含まれているIstio Ingress Gatewayと簡単に統合できます。</span></li>
+<li><span class="merged" id="index.4dx8q0" title="原文 : Manual Scalar - lets you specify the desired replica count.">手動スカラー - は、目的のレプリカ数を指定できます。</span></li>
+<li><span class="merged" id="index.2G0YNo" title="原文 : Metrics Trait - provides a simplified integration with the Prometheus service included in the Verrazzano platform.">メトリクス特性 - Verrazzanoプラットフォームに含まれるPrometheusサービスとの簡単な統合を提供します。</span></li>
+<li><span class="merged" id="index.2VJt3I" title="原文 : Logging Trait - contains the configuration for an additional logging sidecar with a custom image and Fluentd configuration file.">ロギング・トラップ - には、カスタム・イメージとFluentd構成ファイルを持つ追加のロギング・サイド・カーの構成が含まれます。</span></li>
+</ul>
+<h3 id="code-view"><span class="merged" id="index.2f1R4W"  title="原文:: Code View">コード・ビュー</span></h3>
+<p><span class="merged" id="index.1ZJsPo" title="原文 : Code View displays a shell script for deploying the application for the WebLogic domain into Verrazzano as well as the application YAML resource definition and project resource, if applicable."><code>Code View</code>は、WebLogicドメインのアプリケーションをVerrazzanoにデプロイするためのシェル・スクリプトと、アプリケーションYAMLリソース定義およびプロジェクト・リソース(該当する場合)を表示します。</span></p>
+<p><span class="merged" id="index.1zxtnP.spl1" title="原文 : If it is not already selected, then use the Script Language drop-down menu to choose the desired scripting language.">まだ選択されていない場合は、<code>Script Language</code>ドロップダウン・メニューを使用して目的のスクリプト言語を選択します。</span> <span class="merged" id="index.1zxtnP.spl2" title="原文 : Note that the application is providing a working sample script simply to show how the process might be automated.">アプリケーションには、プロセスの自動化方法を示す作業サンプル・スクリプトが用意されています。</span> <span class="merged" id="index.1zxtnP.spl3" title="原文 : Before using the script, review the script and make any changes necessary for your environment.">スクリプトを使用する前に、スクリプトを確認し、環境に必要な変更を加えます。</span> <span class="merged" id="index.1zxtnP.spl4" title="原文 : One typical change that would be considered a best practice would be to change the script to accept either command-line arguments or externally set environment variables to specify any credentials required by the script to eliminate hard-coding the credentials in the script itself.">ベスト・プラクティスとみなされる一般的な変更の1つは、スクリプトを変更してコマンドライン引数を受け入れるか、またはスクリプト自体で資格証明をハード・コーディングしないようにスクリプトに必要な資格証明を指定するように環境変数を外部で設定することです。</span> <span class="merged" id="index.1zxtnP.spl5" title="原文 : This change is left as an exercise for you because different environments typically will have existing standards for securely handling such credentials.">通常、このような資格証明を安全に処理するための既存の標準が様々な環境にあるため、この変更は演習として残されます。</span> </p>
+<h3 id="deploy-application"><span class="merged" id="index.1A6efe"  title="原文:: Deploy Application"> アプリケーションのデプロイ</span></h3>
+<p><span class="merged" id="index.2yTVdE.spl1" title="原文 : Deploy Application deploys the application to Verrazzano."><code>Deploy Application</code>は、アプリケーションをVerrazzanoにデプロイします。</span> <span class="merged" id="index.2yTVdE.spl2" title="原文 : You access this action by using the Deploy Application button or the Go &gt; Deploy Verrazzano Application menu item.">このアクションにアクセスするには、<code>Deploy Application</code>ボタンまたは<code>Go</code> > <code>Deploy Verrazzano Application</code>メニュー・アイテムを使用します。</span> </p>
+<h3 id="undeploy-application"><span class="merged" id="index.CpJrc"  title="原文:: Undeploy Application">アプリケーションのアンデプロイ</span></h3>
+<p><span class="merged" id="index.prrXQ.spl1" title="原文 : Undeploy Application removes the Verrazzano application from the WebLogic domain and its dependent objects in Kubernetes."><code>Undeploy Application</code>は、VerrazzanoアプリケーションをKubernetesのWebLogicドメインとその依存オブジェクトから削除します。</span> <span class="merged" id="index.prrXQ.spl2" title="原文 : Undeploying the application stops the pods associated with the application.">アプリケーションをアンデプロイすると、アプリケーションに関連付けられたポッドが停止されます。</span> <span class="merged" id="index.prrXQ.spl3" title="原文 : In addition, you can choose whether to also delete the corresponding namespace.">また、対応するネームスペースを削除するかどうかも選択できます。</span> <span class="merged" id="index.prrXQ.spl4" title="原文 : Removing the application namespace removes all applications, components, secrets, ConfigMaps, and other Kubernetes objects that exist in the Kubernetes namespace.">アプリケーション・ネームスペースを削除すると、Kubernetesネームスペースに存在するアプリケーション、コンポーネント、シークレット、ConfigMapsおよびその他のKubernetesオブジェクトがすべて削除されます。</span> <span class="merged" id="index.prrXQ.spl5" title="原文 : You access these actions by using the Undeploy Application button or the Go &gt; Undeploy Verrazzano Application menu item.">これらのアクションにアクセスするには、<code>Undeploy Application</code>ボタンまたは<code>Go</code> > <code>Undeploy Verrazzano Application</code>メニュー・アイテムを使用します。</span> </p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../vz-component/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../../../developer/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../../js/learn.js?1667188184"></script>
+    <script src="../../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

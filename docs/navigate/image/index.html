@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="" name="description">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>イメージ :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/image/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.J7SgQ" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.lh2nR" title="原文 :  About the WKT UI Application "><a href="../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1BOvH"  title="原文::  Get Started "><a href="../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.13yXnz"  title="原文::  Prerequisites "><a href="../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.Qzxsg" title="原文 :  Install WKT UI "><a href="../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.4Jnisw" title="原文 :  Navigate the UI "><a href="../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.3Gno2l"  title="原文::  Project Settings "><a href="../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.3hoNzn"  title="原文::  Model "><a href="../model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.2jpEqE"  title="原文::  Image "><a href="index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.4bY0IR"  title="原文::  Kubernetes "><a href="../kubernetes/index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.3THfkn"  title="原文::  Client Configuration "><a href="../kubernetes/k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.1aGE18"  title="原文::  WebLogic Kubernetes Operator "><a href="../kubernetes/k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.1PECEA"  title="原文::  WebLogic Domain "><a href="../kubernetes/k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.16QtSR"  title="原文::  Ingress Controller "><a href="../kubernetes/k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.3NyJfo"  title="原文::  Verrazzano "><a href="../verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.2KnyWg"  title="原文::  Client Configuration "><a href="../verrazzano/vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3CQMCj"  title="原文::  Installation "><a href="../verrazzano/vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.2tel0O"  title="原文::  Component "><a href="../verrazzano/vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.1P56H4"  title="原文::  Application "><a href="../verrazzano/vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.30zvCT"  title="原文::  Developer Guide "><a href="../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.2BrmKx"  title="原文::  Release Notes "><a href="../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.1OysES"  title="原文::  Release 1.1.1 "><a href="../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1ntMQS" title="原文 :  Release 1.1.0 "><a href="../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.jtUdm" title="原文 :  Release 1.2.0 "><a href="../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.1r7dwf" title="原文 :  &gt; Navigate the UI &gt; Image "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../index.html'></a> > <a href='../index.html'>UIのナビゲート</a>&nbsp;>&nbsp;イメージ</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.1tdmHJ"  title="原文:: Image"><a href="index.html#image">イメージ</a></span></li>
+        <li><span class="merged" id="index.3vxsi"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+        <li><span class="merged" id="index.umgfh"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+        <li><span class="merged" id="index.3uH05u" title="原文 : Create Images"><a href="index.html#create-images">イメージの作成</a></span></li>
+        <li><span class="merged" id="index.bK5uy" title="原文 : Push Images"><a href="index.html#push-images">イメージのプッシュ</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.5evIB"  title="原文:: Image">イメージ</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.1tdmHJ.1"  title="原文:: Image"><a href="index.html#image">イメージ</a></span></li>
+<li><span class="merged" id="index.3vxsi.1"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span>
+<ul>
+<li><span class="merged" id="index.2zpHnY" title="原文 : Target Image Name and Registry Credentials"><a href="index.html#target-image-name-and-registr-credentials">ターゲット・イメージ名およびレジストリ資格証明</a></span></li>
+<li><span class="merged" id="index.4GG31U" title="原文 : Base Image to Use"><a href="index.html#base-image-to-use">使用するベース・イメージ</a></span></li>
+<li><span class="merged" id="index.3ioxuU" title="原文 : Installers for Building the Image"><a href="index.html#installers-for-building-the-image">イメージをビルドするためのインストーラ</a></span></li>
+<li><span class="merged" id="index.2CZhMN"  title="原文:: Patch Oracle Home"><a href="index.html#patch-oracle-home">Oracleホームへのパッチ適用</a></span></li>
+<li><span class="merged" id="index.1tdnGm" title="原文 : WebLogic Deploy Tooling Configuration"><a href="index.html#weblogic-deploy-tooling-configuration">WebLogic Deploy Tooling構成</a></span></li>
+<li><span class="merged" id="index.1owvyX" title="原文 : Image Build Configuration"><a href="index.html#image-build-configuration">イメージ・ビルド構成</a></span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.umgfh.1"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+<li><span class="merged" id="index.3uH05u.1" title="原文 : Create Images"><a href="index.html#create-images">イメージの作成</a></span></li>
+<li><span class="merged" id="index.bK5uy.1" title="原文 : Push Images"><a href="index.html#push-images">イメージのプッシュ</a></span></li>
+</ul>
+<h3 id="image"><span class="merged" id="index.5evIB.1"  title="原文:: Image">イメージ</span></h3>
+<p><span class="merged" id="index.2NtD4E" title="原文 : The Image section helps you build container images for deploying WebLogic-based applications in a Kubernetes environment using the WebLogic Image Tool."><code>Image</code>セクションは、<a href="https://oracle.github.io/weblogic-image-tool/">WebLogic Image Tool</a>を使用してWebLogicベースのアプリケーションをKubernetes環境にデプロイするためのコンテナ・イメージを構築するのに役立ちます。</span></p>
+<h3 id="design-view"><span class="merged" id="index.4fUZXo"  title="原文:: Design View"> 設計ビュー</span></h3>
+<p><span class="merged" id="index.2y5UUx" title="原文 : Design View helps you specify the necessary data needed to run the WebLogic Image Tool to build an image for running the WebLogic domain."><code>Design View</code>は、WebLogicドメインを実行するためのイメージを構築するためにWebLogic Image Toolの実行に必要なデータを指定するのに役立ちます。</span></p>
+<p><span class="merged" id="index.1biaYG.spl1" title="原文 : Use the Design View page to specify whether to create a new or use an existing (the default) Primary Image and whether or not (the default) to use an Auxiliary Image (an existing one or create a new one)."><code>Design View</code>ページを使用して、新規作成か既存の(デフォルトの)<code>Primary Image</code>を使用するか、そうでなく(デフォルトでなく)<code>Auxiliary Image</code>を指定します(既存のものか、新しいのを作成か)。</span> <span class="merged" id="index.1biaYG.spl2" title="原文 : Note that auxiliary images are available for the &ldquo;Model in Image&rdquo; domain location only."><strong>ノート</strong> 補助イメージは"Model in Image" <a href="../project-settings/index.html#choosing-a-domain-location">「ドメインのロケーション」</a><em>「のみ」</em>で使用できます。</span> </p>
+<ul>
+<li><span class="merged" id="index.3BvI5V.spl1" title="原文 : Primary Image - The image containing the Oracle Fusion Middleware software."><strong>「プライマリ・イメージ」</strong> - Oracle Fusion Middlewareソフトウェアを含むイメージ。</span> <span class="merged" id="index.3BvI5V.spl2" title="原文 : It is used as the basis of all containers that run WebLogic Servers for the domain.">ドメインに対してWebLogic Serversを実行するすべてのコンテナの基礎として使用されます。</span> </li>
+<li><span class="merged" id="index.4RIBYk.spl1" title="原文 : Auxiliary Image - The image that supplies the WebLogic Deploy Tooling software and the model files."><strong>「補助イメージ」</strong> - WebLogic Deploy Toolingソフトウェアおよびモデル・ファイルを提供するイメージ。</span> <span class="merged" id="index.4RIBYk.spl2" title="原文 : At runtime, the auxiliary image&rsquo;s content is merged with the primary image&rsquo;s content.">実行時に、補助イメージのコンテンツはプライマリ・イメージのコンテンツとマージされます。</span> </li>
+</ul>
+<div class="wktui-row">
+  <div class="wktui-two-images-column">
+    <img alt="プライマリ・イメージ図" src="../../images/primary-image.png" style="width:100%" />
+  </div>
+  <div class="wktui-two-images-column">
+    <img alt="補助イメージ図" src="../../images/auxiliary-image.png" style="width:100%" />
+  </div>
+</div>
+<p><span class="merged" id="index.4HMQ2F.spl1" title="原文 : The primary image is the one used for running the domain and the auxiliary image contains the data that defines the domain.">プライマリ・イメージはドメインの実行に使用されるイメージで、補助イメージにはドメインを定義するデータが含まれます。</span> <span class="merged" id="index.4HMQ2F.spl2" title="原文 : One primary image can be reused for hundreds of domains whereas an auxiliary image is domain-specific.">何百ものドメインでは1つのプライマリ・イメージを再利用できますが、補助イメージはドメイン固有です。</span> <span class="merged" id="index.4HMQ2F.spl3" title="原文 : When using auxiliary images, the primary image contains the OS, JDK, and FMW software installations; the auxiliary image supplies the specifics for a single domain.">補助イメージを使用する場合、プライマリ・イメージにはOS、JDKおよびFMWソフトウェアのインストールが含まれ、補助イメージは単一ドメインの詳細を提供します。</span> </p>
+<p><span class="merged" id="index.q8pVc.spl1" title="原文 : If you select to create a new primary image, you&rsquo;ll see the following basic panes and a few advanced panes on the Primary Image Design View page.">新しいプライマリ・イメージの作成を選択した場合は、<code>Primary Image</code>「設計ビュー」ページに次の基本ペインといくつかの高度なペインが表示されます。</span> <span class="merged" id="index.q8pVc.spl2" title="原文 : If you select to create a new auxiliary image, you must select the Auxiliary Image Design View page, to configure it.">新しい補助イメージを作成する場合は、<code>Auxiliary Image</code>「設計ビュー」ページを選択して構成する必要があります。</span> <span class="merged" id="index.q8pVc.spl3" title="原文 : Note that not all the fields described in the following sections for the Primary Image, are relevant for an Auxiliary Image."><code>Primary Image</code>の次のセクションで説明するフィールドは、<code>Auxiliary Image</code>にすべてが関連して<em>いるわけではありません</em>。</span> <span class="merged" id="index.q8pVc.spl4" title="原文 : The exceptions are noted.">例外に注意してください。</span> </p>
+<ul>
+<li><span class="merged" id="index.X0nyW" title="原文 : Target Image Name and Registry Credentials"><a href="index.html#target-image-name-and-registry-credentials">ターゲット・イメージ名およびレジストリ資格証明</a></span></li>
+<li><span class="merged" id="index.4GG31U.1" title="原文 : Base Image to Use"><a href="index.html#base-image-to-use">使用するベース・イメージ</a></span></li>
+<li><span class="merged" id="index.3ioxuU.1" title="原文 : Installers for Building the Image"><a href="index.html#installers-for-building-the-image">イメージをビルドするためのインストーラ</a></span></li>
+<li><span class="merged" id="index.2CZhMN.1"  title="原文:: Patch Oracle Home"><a href="index.html#patch-oracle-home">Oracleホームへのパッチ適用</a></span></li>
+<li><span class="merged" id="index.1tdnGm.1" title="原文 : WebLogic Deploy Tooling Configuration"><a href="index.html#weblogic-deploy-tooling-configuration">WebLogic Deploy Tooling構成</a></span></li>
+<li><span class="merged" id="index.1owvyX.1" title="原文 : Image Build Configuration"><a href="index.html#image-build-configuration">イメージ・ビルド構成</a></span></li>
+</ul>
+<h4 id="target-image-name-and-registry-credentials"><span class="merged" id="index.1hnUrH" title="原文 : Target Image Name and Registry Credentials">ターゲット・イメージ名およびレジストリ資格証明</span></h4>
+<p><span class="merged" id="index.1MAgAb.spl1" title="原文 : The most important field in this pane is the Image Tag field.">このペインの最も重要なフィールドは、<code>Image Tag</code>フィールドです。</span> <span class="merged" id="index.1MAgAb.spl2" title="原文 : This is the name to give to the newly created image, which must conform to the image naming standards.">これは、新しく作成したイメージに指定する名前で、<a href="https://docs.docker.com/engine/reference/commandline/tag/#extended-description">「イメージ・ネーミング標準」</a>に準拠している必要があります。</span> <span class="merged" id="index.1MAgAb.spl3" title="原文 : Because most Kubernetes environments will need to pull the image from a container image registry (for example, Docker Hub), the newly-created image typically will need to be pushed to the appropriate container image registry.">ほとんどのKubernetes環境は、コンテナ・イメージ・レジストリ(Docker Hubなど)からイメージをプルする必要があるため、新しく作成したイメージは通常、適切なコンテナ・イメージ・レジストリにプッシュする必要があります。</span> <span class="merged" id="index.1MAgAb.spl4" title="原文 : Most registries will require authentication as a user with the necessary permissions to push images.">ほとんどのレジストリでは、イメージをプッシュするために必要な権限を持つユーザーとして認証が必要になります。</span> <span class="merged" id="index.1MAgAb.spl5" title="原文 : As described in the image naming standards, the Image Tag field typically must include the DNS name of the container image registry prior to the first slash (/) character.">イメージ・ネーミング標準で説明されているように、<code>Image Tag</code>フィールドには通常、最初のスラッシュ(<code>/</code>)文字より前にコンテナ・イメージ・レジストリのDNS名が含まれている必要があります。</span> <span class="merged" id="index.1MAgAb.spl6" title="原文 : Images not containing a container image registry DNS name are assumed to be using Docker Hub.">コンテナ・イメージ・レジストリのDNS名を含まないイメージは、Dockerハブを使用しているとみなされます。</span> </p>
+<p><span class="merged" id="index.3WA5Pm.spl1" title="原文 : After the Image Tag field is populated, the application detects the presence of any prepended DNS name and displays the value in the Image Registry Address field."><code>Image Tag</code>フィールドが移入されると、アプリケーションは先頭に付加されたDNS名の存在を検出し、<code>Image Registry Address</code>フィールドに値を表示します。</span> <span class="merged" id="index.3WA5Pm.spl2" title="原文 : This field is read-only so the only way to change the DNS name is to change the value of the Image Tag field.">このフィールドは読取り専用であるため、DNS名を変更する唯一の方法は、<code>Image Tag</code>フィールドの値を変更することです。</span> <span class="merged" id="index.3WA5Pm.spl3" title="原文 : The Image Registry Push Username and Image Registry Push Password fields let you provide the user credentials needed to log in to the container image registry prior to pushing the newly-created image."><code>Image Registry Push Username</code>および<code>Image Registry Push Password</code>フィールドを使用すると、新しく作成されたイメージをプッシュする前にコンテナ・イメージ・レジストリにログインするために必要なユーザー資格証明を指定できます。</span> <span class="merged" id="index.3WA5Pm.spl4" title="原文 : If explicit authentication is not required, then disable the Specify Image Push Credentials option.">明示的な認証が必要ない場合は、<code>Specify Image Push Credentials</code>オプションを無効にします。</span> <span class="merged" id="index.3WA5Pm.spl5" title="原文 : If Specify Image Push Credentials is enabled, then any attempts to push the image will fail unless the Image Registry Push Username and Image Registry Push Password fields are specified."><code>Specify Image Push Credentials</code>が有効な場合、<code>Image Registry Push Username</code>および<code>Image Registry Push Password</code>フィールドが指定されていないかぎり、イメージをプッシュしようとすると失敗します。</span> </p>
+<h4 id="base-image-to-use"><span class="merged" id="index.1qUxrS" title="原文 : Base Image to Use">使用するベース・イメージ</span></h4>
+<p><span class="merged" id="index.1neibs.spl1" title="原文 : By default, the WebLogic Image Tool uses an Oracle Linux base image when building the new image.">デフォルトでは、WebLogic Image Toolは、新しいイメージを構築するときにOracle Linuxベース・イメージを使用します。</span> <span class="merged" id="index.1neibs.spl2" title="原文 : To specify a different base image, enable Use Custom Base Image and provide the base image&rsquo;s tag in the Custom Base Image to Use field.">別のベース・イメージを指定するには、<code>Use Custom Base Image</code>を有効にし、<code>Custom Base Image to Use</code>フィールドにベース・イメージのタグを指定します。</span> <span class="merged" id="index.1neibs.spl3" title="原文 : Any container image registry address found in the base image tag will be displayed in the read-only Base Image Registry Address field.">ベース・イメージ・タグで見つかったコンテナ・イメージ・レジストリ・アドレスは、読取り専用<code>Base Image Registry Address</code>フィールドに表示されます。</span> <span class="merged" id="index.1neibs.spl4" title="原文 : If pulling the base image requires authentication, then enable Custom Base Image Pull Requires Login and provide the necessary credentials in the Custom Base Image Pull Username and Custom Base Image Pull Password fields.">ベース・イメージをプルするには認証が必要な場合は、<code>Custom Base Image Pull Requires Login</code>を有効にし、<code>Custom Base Image Pull Username</code>および<code>Custom Base Image Pull Password</code>フィールドに必要な資格証明を指定します。</span> </p>
+<p><span class="merged" id="index.2KYXtj.spl1" title="原文 : When using a custom base image, the application requires the image to be inspected using the WebLogic Image Tool&rsquo;s Inspect Image command.">カスタム・ベース・イメージを使用する場合、WebLogic Image Toolの<a href="https://oracle.github.io/weblogic-image-tool/userguide/tools/inspect-image/">「イメージの調査」</a>コマンドを使用してイメージを検査する必要があります。</span> <span class="merged" id="index.2KYXtj.spl2" title="原文 : Note: This action is relevant for Primary Images only."><strong>ノート</strong>: このアクションは、<code>Primary Images</code>にのみ関連します。</span> <span class="merged" id="index.2KYXtj.spl3" title="原文 : To invoke this inspection, click Inspect Custom Base Image.">この検査を起動するには、<code>Inspect Custom Base Image</code>をクリックします。</span> <span class="merged" id="index.2KYXtj.spl4" title="原文 : This inspection tells the application if Java or the Oracle Fusion Middleware software is already installed in the image.">この検査では、JavaまたはOracle Fusion Middlewareソフトウェアがすでにイメージにインストールされているかどうかがアプリケーションに通知されます。</span> <span class="merged" id="index.2KYXtj.spl5" title="原文 : If it finds either of these software packages installed, then fields in the Installers for Building the Image pane will disappear because they are unneeded.">これらのソフトウェア・パッケージのいずれかがインストールされている場合、<code>Installers for Building the Image</code>ペインのフィールドは不要であるため表示されません。</span> </p>
+<p><span class="merged" id="index.4CuYp9.spl1" title="原文 : In the current release, the Patch Oracle Home pane will disappear if the base image contains an Oracle Fusion Middleware installation.">現在のリリースでは、ベース・イメージにOracle Fusion Middlewareインストールが含まれている場合、<code>Patch Oracle Home</code>ペインは表示されません。</span> <span class="merged" id="index.4CuYp9.spl2" title="原文 : The rationale being that the act of patching a base image installation will bloat the size of the image.">基本イメージのインストールにパッチを適用する行為によって、イメージのサイズが大きくなります。</span> <span class="merged" id="index.4CuYp9.spl3" title="原文 : As such, it is better to either create the base image with the latest patches already installed or allow the WebLogic Image Tool&rsquo;s multistage build to install and patch the Oracle Fusion Middleware installation while minimizing the resulting image size.">そのため、すでにインストールされている最新のパッチを使用してベース・イメージを作成するか、WebLogic Image Toolのマルチ・ステージ・ビルドでOracle Fusion Middlewareインストールをインストールしてパッチ適用しながら、結果のイメージ・サイズを最小化することをお薦めします。</span> </p>
+<h4 id="installers-for-building-the-image"><span class="merged" id="index.33MwKv" title="原文 : Installers for Building the Image">イメージをビルドするためのインストーラ</span></h4>
+<p><span class="merged" id="index.MueZj" title="原文 : This pane will contain form fields for up to three installers (depending on the base image being used); they are:">このペインには、(使用されるベース・イメージに応じて)最大3人のインストーラのフォーム・フィールドが含まれます。次のものがあります:</span></p>
+<ul>
+<li><span class="merged" id="index.mHSkL" title="原文 : JDK Installer (Primary Images only)">JDKインストーラ(<code>Primary Images</code>のみ)</span></li>
+<li><span class="merged" id="index.13Yvvo" title="原文 : Oracle Fusion Middleware Installer (Primary Images only)">Oracle Fusion Middlewareインストーラ(<code>Primary Images</code>のみ)</span></li>
+<li><span class="merged" id="index.3BHr3s" title="原文 : WebLogic Deploy Tooling Installer">WebLogic Deploy Toolingインストーラ</span></li>
+</ul>
+<p><span class="merged" id="index.3glcbS.spl1" title="原文 : When specifying the JDK Installer, it is important to remember that this installer will be used to install the JDK inside the Linux x64 image being created."><code>JDK Installer</code>を指定する場合、このインストーラを使用して、作成されるLinux x64イメージ内にJDKをインストールすることが重要です。</span> <span class="merged" id="index.3glcbS.spl2" title="原文 : Therefore, the Linux JDK Installer to Use field should always point to the Linux x64 compressed archive installer (for example, jdk-8u291-linux-x64.tar.gz).">したがって、<code>Linux JDK Installer to Use</code>フィールドは、常にLinuxのx64圧縮アーカイブ・インストーラ(<code>jdk-8u291-linux-x64.tar.gz</code>など)を指している必要があります。</span> <span class="merged" id="index.3glcbS.spl3" title="原文 : While the value of the JDK Version field is just a tag associated with the installer used to specify which version of the JDK installer that the WebLogic Image Tool should use, the best practice is to set the value to the real version number (for example, 8u291 or 1.8.0_291)."><code>JDK Version</code>フィールドの値は、WebLogic Image Toolで使用するJDKインストーラのバージョンを指定するために使用されるインストーラに関連付けられたタグにすぎませんが、ベスト・プラクティスは、値を実際のバージョン番号(<code>8u291</code>や<code>1.8.0_291</code>など)に設定することです。</span> </p>
+<p><span class="merged" id="index.sLKMH.spl1" title="原文 : The Oracle Fusion Middleware Installer to Use field must point to an installer that includes a modern version of WebLogic Server (12.2.1.3 or later)."><code>Oracle Fusion Middleware Installer to Use</code>フィールドは、WebLogic Serverの最新バージョン(12.2.1.3以上)を含むインストーラを指している必要があります。</span> <span class="merged" id="index.sLKMH.spl2" title="原文 : Use the Oracle Fusion Middleware Installer Type field to tell the WebLogic Image Tool which installer you are providing."><code>Oracle Fusion Middleware Installer Type</code>フィールドを使用して、提供しているインストーラをWebLogic Image Toolに指示します。</span> <span class="merged" id="index.sLKMH.spl3" title="原文 : It is important to make sure the type and installer match because installers of different types require different fields to be specified during installation.">インストール時に異なるフィールドを指定する必要があるため、タイプおよびインストーラが一致していることを確認することが重要です。</span> <span class="merged" id="index.sLKMH.spl4" title="原文 : As with the JDK Version field mentioned previously, the Oracle Fusion Middleware Version field is just a tag to associate with the installer but the best practice is to set the value to the actual Oracle Fusion Middleware version number (for example, 12.2.1.4.0).">前述の<code>JDK Version</code>フィールドと同様に、<code>Oracle Fusion Middleware Version</code>フィールドはインストーラに関連付けるタグにすぎませんが、ベスト・プラクティスは、値を実際のOracle Fusion Middlewareバージョン番号(たとえば、<code>12.2.1.4.0</code>)に設定することです。</span> </p>
+<p><span class="merged" id="index.4EEWyn.spl1" title="原文 : By default, Download and Use Latest WebLogic Deploy Tooling Installer is enabled so that the application will automatically download and use the latest, generally-available release in the WebLogic Deploy Tooling GitHub repository.">デフォルトでは、<code>Download and Use Latest WebLogic Deploy Tooling Installer</code>が有効になり、アプリケーションはWebLogic Deploy Tooling <a href="https://github.com/oracle/weblogic-deploy-tooling/releases/">「GitHubリポジトリ」</a>で、一般的に使用可能な最新のリリースを自動的にダウンロードして使用します。</span> <span class="merged" id="index.4EEWyn.spl2" title="原文 : To specify a different installer, disable Download and Use Latest WebLogic Deploy Tooling Installer and fill out the WebLogic Deploy Tooling Installer to Use and WebLogic Deploy Tooling Version fields appropriately.">別のインストーラを指定するには、<code>Download and Use Latest WebLogic Deploy Tooling Installer</code>を無効にし、<code>WebLogic Deploy Tooling Installer to Use</code>および<code>WebLogic Deploy Tooling Version</code>フィールドを適切に入力します。</span> <span class="merged" id="index.4EEWyn.spl3" title="原文 : As with the other installers&apos; version number fields, the best practice it to use the actual WebLogic Deploy Tooling version number (for example, 1.9.17).">他のインストーラのバージョン番号フィールドと同様に、実際のWebLogic Deploy Toolingバージョン番号(<code>1.9.17</code>など)を使用することをお薦めします。</span> <span class="merged" id="index.4EEWyn.spl4" title="原文 : Note that new WDT versions often contain bug fixes or enhancements required to work with the latest capabilities, many of which are exposed by this application.">新しいWDTバージョンには、多くの場合、最新の機能を操作するために必要なバグ修正または拡張が含まれており、その多くはこのアプリケーションによって公開されています。</span> <span class="merged" id="index.4EEWyn.spl5" title="原文 : As such, using the latest version is strongly recommended.">そのため、最新バージョンを使用することを強くお勧めします。</span> </p>
+
+<div class="notices note" ><p><span class="merged" id="index.AfO1f.spl1" title="原文 : For &ldquo;Model in Image&rdquo; or &ldquo;Domain in Image&rdquo; domain locations, when building your primary or auxiliary image, Oracle strongly recommends using WDT 2.0.">"Model in Image"または"Domain in Image" <a href="../project-settings/index.html#choosing-a-domain-location">「ドメインのロケーション」</a>の場合、プライマリ・イメージまたは補助イメージOracleでは、<a href="https://github.com/oracle/weblogic-deploy-tooling/releases">WDT 2.0</a>を使用することを強くお薦めします。</span> <span class="merged" id="index.AfO1f.spl2" title="原文 : Certain WKT UI actions, such as Prepare Model, may rewrite the model into a format that earlier WDT versions cannot parse."><code>Prepare Model</code>などの特定のWKT UIアクションは、以前のWDTバージョンが解析できない形式にモデルを書き換える可能性があります。</span> </p>
+</div>
+
+<h4 id="patch-oracle-home"><span class="merged" id="index.2zrbj7"  title="原文:: Patch Oracle Home">Oracleホームへのパッチ適用</span></h4>
+<p><span class="merged" id="index.2XpqNN.spl1" title="原文 : NOTE: This pane is relevant for Primary Images only."><strong>ノート</strong>:&nbsp;このペインは、<code>Primary Images</code>にのみ関連します。</span> <span class="merged" id="index.2XpqNN.spl2" title="原文 : Oracle strongly recommends patching all Oracle Fusion Middleware installations with the latest Patch Set Updates (PSUs) and other recommended patches to ensure that the latest security fixes are applied.">Oracleでは、最新のPatch Set Updates (PSU)およびその他の推奨パッチを使用して、すべてのOracle Fusion Middlewareインストールにパッチを適用して、最新のセキュリティ修正が適用することを強くお薦めします。</span> <span class="merged" id="index.2XpqNN.spl3" title="原文 : This pane configures the WebLogic Image Tool to apply the specified patches to the Oracle Home during the image creation process.">このペインでは、イメージ作成プロセス中に指定されたパッチをOracle Homeに適用するようにWebLogic Image Toolを構成します。</span> <span class="merged" id="index.2XpqNN.spl4" title="原文 : There are two mechanisms for specifying that patches should be applied:">パッチを適用する必要があることを示すメカニズムは2つあります:</span> </p>
+<ul>
+<li><span class="merged" id="index.qCApo" title="原文 : Radio buttons to specify what patch bundles should be applied.">適用するパッチ・バンドルを指定するラジオ・ボタン。</span></li>
+<li><span class="merged" id="index.3cuFIX" title="原文 : The list of patch numbers to apply.">適用するパッチ番号のリスト。</span></li>
+</ul>
+<p><span class="merged" id="index.2FpNdk" title="原文 : The patch bundle radio buttons provide three choices:">パッチ・バンドルのラジオ・ボタンには、次の3つの選択肢があります:</span></p>
+<ul>
+<li><span class="merged" id="index.27o128" title="原文 : None - Applies no bundle patches."><code>None</code> - バンドル・パッチは適用されません。</span></li>
+<li><span class="merged" id="index.4IXIBD" title="原文 : Apply Latest PSU Only - Applies the latest PSU patch but no other recommended patches."><code>Apply Latest PSU Only</code> - 最新のPSUパッチを適用しますが、ほかの推奨パッチは適用されません。</span></li>
+<li><span class="merged" id="index.ZjGTs" title="原文 : Apply All Recommended Patches - Applies all recommended patches, which always includes the latest PSU, in addition to other important fixes."><code>Apply All Recommended Patches</code> - 他の重要な修正に加えて、常に最新のPSUを含むすべての推奨パッチを適用します。</span></li>
+</ul>
+<p><span class="merged" id="index.9AKSL.spl1" title="原文 : Use the Individual Patches to Apply field to specify individual patch numbers to apply."><code>Individual Patches to Apply</code>フィールドを使用して、適用する個々のパッチ番号を指定します。</span> <span class="merged" id="index.9AKSL.spl2" title="原文 : These patches will be applied after any patch bundles specified.">これらのパッチは、指定されたパッチ・バンドルの後に適用されます。</span> </p>
+<p><span class="merged" id="index.2FQ47U.spl1" title="原文 : The WKT UI application requires that valid Oracle Support credentials be specified using the Oracle Support Username and Oracle Support Password fields.">WKT UIアプリケーションでは、<code>Oracle Support Username</code>および<code>Oracle Support Password</code>フィールドを使用して有効なOracle Support資格証明を指定する必要があります。</span> <span class="merged" id="index.2FQ47U.spl2" title="原文 : This allows the WebLogic Image Tool to automatically discover the latest PSU and recommended patches and download any patches specified as part of the image creation process.">これにより、WebLogic Image Toolは、最新のPSUおよび推奨パッチを自動的に検出し、イメージ作成プロセスの一部として指定されたパッチをダウンロードできます。</span> </p>
+<p><span class="merged" id="index.28Lg0a.spl1" title="原文 : As a last resort, if no valid Oracle Support credentials are available, the patching process can be skipped by disabling the Apply Patches option.">最後の手段として、有効なOracle Support資格証明がない場合は、<code>Apply Patches</code>オプションを無効にしてパッチ適用プロセスをスキップできます。</span> <span class="merged" id="index.28Lg0a.spl2" title="原文 : To make sure your WebLogic-based applications are as secure as possible, this really should be a last resort."><em>WebLogicベースのアプリケーションが可能なかぎり安全であることを確認するには、これが最後の手段となります。</em></span> </p>
+<h4 id="weblogic-deploy-tooling-configuration"><span class="merged" id="index.2md1sk" title="原文 : WebLogic Deploy Tooling Configuration">WebLogic Deploy Tooling構成</span></h4>
+<p><span class="merged" id="index.1MR5OP" title="原文 : This Advanced pane applies only to images using either the &ldquo;Model in Image&rdquo; or &ldquo;Domain in Image&rdquo; domain locations.">この<code>Advanced</code>ペインは、"Model in Image"または"Domain in Image" <a href="../project-settings/index.html#choosing-a-domain-location">「ドメインのロケーション」</a>のいずれかを使用するイメージにのみ適用されます。</span></p>
+<p><span class="merged" id="index.3VbdEK.spl1" title="原文 : For &ldquo;Domain in Image&rdquo; only, the Domain Type field tells WebLogic Deploy Tooling what type of domain to create.">"Domain in Image"の場合のみ、<code>Domain Type</code>フィールドは、作成するドメインのタイプをWebLogic Deploy Toolingに通知します。</span> <span class="merged" id="index.3VbdEK.spl2" title="原文 : Use the Domain Home Directory to change the location of the WebLogic domain directory inside the container."><code>Domain Home Directory</code>を使用して、コンテナ内のWebLogicドメイン・ディレクトリのロケーションを変更します。</span> <span class="merged" id="index.3VbdEK.spl3" title="原文 : For &ldquo;Model in Image&rdquo; and &ldquo;Domain in Image&rdquo;, the Model Home Directory field specifies the directory where the WDT model files are stored in the image and WDT Home Directory specifies the WDT home directory inside the image.">"Model in Image"および"Domain in Image"の場合、<code>Model Home Directory</code>フィールドはWDTモデル・ファイルがイメージに格納されるディレクトリを指定し、<code>WDT Home Directory</code>はイメージ内のWDTホーム・ディレクトリを指定します。</span> <span class="merged" id="index.3VbdEK.spl4" title="原文 : Typically, there is no need to override these directory locations because the application defaults follow the recommended best practices.">アプリケーションのデフォルトは推奨されるベスト・プラクティスに従うため、通常、これらのディレクトリのロケーションをオーバーライドする必要はありません。</span> </p>
+<h4 id="image-build-configuration"><span class="merged" id="index.4R0H1v" title="原文 : Image Build Configuration">イメージ・ビルド構成</span></h4>
+<p><span class="merged" id="index.29pw7N" title="原文 : This Advanced pane supports altering the default behavior of the WebLogic Image Tool, as well as extending the image build process to include custom build steps that might be required by particular applications or environments.">この<code>Advanced</code>ペインでは、WebLogic Image Toolのデフォルトの動作の変更、および特定のアプリケーションや環境に必要なカスタム構築ステップが含まれるようにイメージ構築プロセスの拡張がサポートされています。</span></p>
+<p><span class="merged" id="index.3egVXN.spl1" title="原文 : The JDK/FMW Installation Owner and JDK/FMW Installation Group fields specify the Linux user and group that should own the JDK and Oracle Fusion Middleware installation directories."><code>JDK/FMW Installation Owner</code>および<code>JDK/FMW Installation Group</code>フィールドは、JDKおよびOracle Fusion Middlewareインストール・ディレクトリを所有する必要があるLinuxユーザーおよびグループを指定します。</span> <span class="merged" id="index.3egVXN.spl2" title="原文 : The default values are generally fine for most environments.">ほとんどの環境では、通常、デフォルト値は適切です。</span> </p>
+<p><span class="merged" id="index.AbEK9.spl1" title="原文 : For any images intended to run in an OpenShift environment, where the configured Security Context Constraints cause the containers to run as a random user in the root group, select Make Image Compatible with OpenShift.">構成されたセキュリティ・コンテキスト制約によってコンテナがルート・グループ内のランダム・ユーザーとして実行されるOpenShift環境で実行するイメージの場合は、<code>Make Image Compatible with OpenShift</code>を選択します。</span> <span class="merged" id="index.AbEK9.spl2" title="原文 : This option changes the default group name to root and gives the group file system write access, as required by OpenShift.">このオプションは、デフォルトのグループ名をrootに変更し、グループ・ファイル・システムへの書き込みアクセス権をOpenShiftで要求します。</span> <span class="merged" id="index.AbEK9.spl3" title="原文 : For more information, see Managing security context constraints in the OpenShift documentation.">詳細は、OpenShiftドキュメントの<a href="https://docs.openshift.com/container-platform/4.8/authentication/managing-security-context-constraints.html">「セキュリティ・コンテキスト制約の管理」</a>を参照してください。</span> </p>
+<p><span class="merged" id="index.1u5nMc.spl1" title="原文 : If the base image is expected to change without the image tag changing, then enable Always Pull Base Image.">イメージ・タグを変更せずにベース・イメージを変更する場合は、<code>Always Pull Base Image</code>を有効にします。</span> <span class="merged" id="index.1u5nMc.spl2" title="原文 : With this option enabled, the image build process will always pull a new version of the base image to ensure that the latest version is being used.">このオプションを有効にすると、イメージ構築プロセスは常に新しいバージョンのベース・イメージをプルして、最新バージョンが使用されるようにします。</span> <span class="merged" id="index.1u5nMc.spl3" title="原文 : Otherwise, the base image will be pulled only if it doesn&rsquo;t already exist in the local machine&rsquo;s image cache.">それ以外の場合、ベース・イメージはローカル・マシンのイメージ・キャッシュにまだ存在していない場合にのみプルされます。</span> </p>
+<p><span class="merged" id="index.38g5ud.spl1" title="原文 : The Image Build Network Name field allows an image build to run when the build process needs access to another container, such as a database that might be running in a container that is needed while WDT is creating the domain."><code>Image Build Network Name</code>フィールドを使用すると、WDTがドメインの作成中に必要なコンテナで実行されているデータベースなど、ビルド・プロセスで別のコンテナにアクセスする必要がある場合、イメージ・ビルドを実行できます。</span> <span class="merged" id="index.38g5ud.spl2" title="原文 : Because the current release doesn&rsquo;t support creating JRF domains during the image build process (that is, for the &ldquo;Domain in Image&rdquo; domain location), it is unlikely that this field will be needed.">現在のリリースでは、イメージ構築プロセス中にJRFドメインの作成(つまり、Domain in Imageドメインのロケーション)がサポートされていないため、このフィールドが必要になる可能性はほとんどありません。</span> <span class="merged" id="index.38g5ud.spl3" title="原文 : However, it is surfaced for completeness.">ただし、完全性のために表面化されています。</span> </p>
+<p><span class="merged" id="index.4RfkM1.spl1" title="原文 : To add custom steps to the image build process, enable Extend Image Build and provide the Dockerfile containing the additional commands in the Additional Build Commands File field.">イメージ構築プロセスにカスタム・ステップを追加するには、<code>Extend Image Build</code>を有効にし、<code>Additional Build Commands File</code>フィールドの追加コマンドを含むDockerfileを指定します。</span> <span class="merged" id="index.4RfkM1.spl2" title="原文 : If the specified Dockerfile needs additional files to be present in the build context directory, then provide the list of those required files in the Additional Build Files field.">指定したDockerfileがビルド・コンテキスト・ディレクトリに追加ファイルが存在する必要がある場合は、これらの必要なファイルのリストを<code>Additional Build Files</code>フィールドに指定します。</span> </p>
+<h3 id="code-view"><span class="merged" id="index.2f1R4W"  title="原文:: Code View">コード・ビュー</span></h3>
+<p><span class="merged" id="index.kL9BM.spl1" title="原文 : For the Primary Image, the Code View displays a shell script that you can use as a starting point for automating the image creation process."><code>Primary Image</code>の場合、<code>Code View</code>には、イメージ作成プロセスの自動化の開始点として使用できるシェル・スクリプトが表示されます。</span> <span class="merged" id="index.kL9BM.spl2" title="原文 : For the &ldquo;Model in Image&rdquo; domain location, there is a similar Code View page for the Auxiliary Image.">"Model in Image" <a href="../project-settings/index.html#choosing-a-domain-location">「ドメインのロケーション」</a>には、<code>Auxiliary Image</code>用の同様の<code>Code View</code>ページがあります。</span> <span class="merged" id="index.kL9BM.spl3" title="原文 : Each page shows the script for creating and pushing its image.">各ページには、イメージを作成およびプッシュするスクリプトが表示されます。</span> </p>
+<p><span class="merged" id="index.1zxtnP.spl1" title="原文 : If it is not already selected, then use the Script Language drop-down menu to choose the desired scripting language.">まだ選択されていない場合は、<code>Script Language</code>ドロップダウン・メニューを使用して目的のスクリプト言語を選択します。</span> <span class="merged" id="index.1zxtnP.spl2" title="原文 : Note that the application is providing a working sample script simply to show how the process might be automated.">アプリケーションには、プロセスの自動化方法を示す作業サンプル・スクリプトが用意されています。</span> <span class="merged" id="index.1zxtnP.spl3" title="原文 : Before using the script, review the script and make any changes necessary for your environment.">スクリプトを使用する前に、スクリプトを確認し、環境に必要な変更を加えます。</span> <span class="merged" id="index.1zxtnP.spl4" title="原文 : One typical change that would be considered a best practice would be to change the script to accept either command-line arguments or externally set environment variables to specify any credentials required by the script to eliminate hard-coding the credentials in the script itself.">ベスト・プラクティスとみなされる一般的な変更の1つは、スクリプトを変更してコマンドライン引数を受け入れるか、またはスクリプト自体で資格証明をハード・コーディングしないようにスクリプトに必要な資格証明を指定するように環境変数を外部で設定することです。</span> <span class="merged" id="index.1zxtnP.spl5" title="原文 : This change is left as an exercise for you because different environments typically will have existing standards for securely handling such credentials.">通常、このような資格証明を安全に処理するための既存の標準が様々な環境にあるため、この変更は演習として残されます。</span> </p>
+<h3 id="create-images"><span class="merged" id="index.28BpXh" title="原文 : Create Images">イメージの作成</span></h3>
+<p><span class="merged" id="index.IJtNt.spl1" title="原文 : Create Primary Image and Create Auxiliary Image invoke the WebLogic Image Tool to create a new container image for running a WebLogic domain in a Kubernetes environment."><code>Create Primary Image</code>および<code>Create Auxiliary Image</code>は、<a href="https://oracle.github.io/weblogic-image-tool/">WebLogic Image Tool</a>を起動して、Kubernetes環境でWebLogicドメインを実行するための新しいコンテナ・イメージを作成します。</span> <span class="merged" id="index.IJtNt.spl2" title="原文 : You access these actions using the Create Primary Image or Create Auxiliary Image button on the Image page or from the Go menu.">これらのアクションには、<code>Image</code>ページまたは<code>Go</code>メニューから<code>Create Primary Image</code>または<code>Create Auxiliary Image</code>ボタンを使用してアクセスします。</span> </p>
+<p><span class="merged" id="index.N35Fw" title="原文 : At a high level, the action performs the following steps:">アクションでは、次のステップが実行されます:</span></p>
+<ol>
+<li><span class="merged" id="index.1iC2Li" title="原文 : Validates the input values necessary for running the action based on your selections.">選択した内容に基づいて、処理の実行に必要な入力値をバリデートします。</span></li>
+<li><span class="merged" id="index.1LnqA4" title="原文 : Saves the WKT Project, if needed.">必要に応じてWKTプロジェクトを保存します。</span></li>
+<li><span class="merged" id="index.45gkTX" title="原文 : Adds the installers to the WIT cache on the local machine using the WebLogic Image Tool Cache command.">WebLogic Image Tool <a href="https://oracle.github.io/weblogic-image-tool/userguide/tools/cache/">「キャッシュ」</a>コマンドを使用して、ローカル・マシン上のWITキャッシュにインストーラを追加します。</span></li>
+<li><span class="merged" id="index.Tzp0r" title="原文 : Builds the image on the local machine using the WebLogic Image Tool Create command.">WebLogic Image Tool <a href="https://oracle.github.io/weblogic-image-tool/userguide/tools/create-image/">「作成」</a>コマンドを使用して、ローカル・マシンにイメージを構築します。</span></li>
+</ol>
+<h3 id="push-images"><span class="merged" id="index.1TdU65" title="原文 : Push Images">イメージのプッシュ</span></h3>
+<p><span class="merged" id="index.1UQDQh.spl1" title="原文 : Push Primary Image and Push Auxiliary Image use the specified Image Builder program to upload (that is, push) the newly-built image to the image registry specified by its image tag."><code>Push Primary Image</code>および<code>Push Auxiliary Image</code>は、指定されたイメージ・ビルダー・プログラムを使用して、イメージ・タグで指定されたイメージ・レジストリに新しく作成されたイメージをアップロード(プッシュ)します。</span> <span class="merged" id="index.1UQDQh.spl2" title="原文 : You access these actions by using the Push Primary Image or Push Auxiliary Image button on the Image page or from the Go menu.">これらのアクションにアクセスするには、<code>Image</code>ページまたは<code>Go</code>メニューから<code>Push Primary Image</code>または<code>Push Auxiliary Image</code>ボタンを使用します。</span> </p>
+<p><span class="merged" id="index.N35Fw.1" title="原文 : At a high level, the action performs the following steps:">アクションでは、次のステップが実行されます:</span></p>
+<ol>
+<li><span class="merged" id="index.nkG5y.spl1" title="原文 : Validates the input values necessary for running the action based on your selections.">選択した内容に基づいて、処理の実行に必要な入力値をバリデートします。</span> <span class="merged" id="index.nkG5y.spl2" title="原文 : This includes making sure that an image with the specified Image Tag value exists in the local machine&rsquo;s image cache.">これには、指定した<code>Image Tag</code>値のイメージがローカル・マシンのイメージ・キャッシュに存在することの確認が含まれます。</span> </li>
+<li><span class="merged" id="index.1LnqA4.1" title="原文 : Saves the WKT Project, if needed.">必要に応じてWKTプロジェクトを保存します。</span></li>
+<li><span class="merged" id="index.hytcv" title="原文 : Logs in to the container image registry, if specified.">コンテナ・イメージ・レジストリ(指定されている場合)にログインします。</span></li>
+<li><span class="merged" id="index.25Gdkm" title="原文 : Pushes the image to the container image registry.">イメージをコンテナ・イメージ・レジストリにプッシュします。</span></li>
+</ol>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../model/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../kubernetes/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../js/learn.js?1667188184"></script>
+    <script src="../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

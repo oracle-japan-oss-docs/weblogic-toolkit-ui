@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="Client Configuration helps you get the necessary connectivity to your Kubernetes cluster." name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>クライアント構成 :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.cxBaP" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.3t7iAC" title="原文 :  About the WKT UI Application "><a href="../../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1F6RvT"  title="原文::  Get Started "><a href="../../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.1ddh3l"  title="原文::  Prerequisites "><a href="../../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.4Q4vj3" title="原文 :  Install WKT UI "><a href="../../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.2XQTja" title="原文 :  Navigate the UI "><a href="../../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.4Ha16W"  title="原文::  Project Settings "><a href="../../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.4YNSyK"  title="原文::  Model "><a href="../../model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.47JMGa"  title="原文::  Image "><a href="../../image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.4bFxKi"  title="原文::  Kubernetes "><a href="../../kubernetes/index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.xpM4U"  title="原文::  Client Configuration "><a href="../../kubernetes/k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.431Tcs"  title="原文::  WebLogic Kubernetes Operator "><a href="../../kubernetes/k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.21TpbQ"  title="原文::  WebLogic Domain "><a href="../../kubernetes/k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.2KYeay"  title="原文::  Ingress Controller "><a href="../../kubernetes/k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.f5bTs"  title="原文::  Verrazzano "><a href="../index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.4ZW3Tv"  title="原文::  Client Configuration "><a href="index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3BHtE2"  title="原文::  Installation "><a href="../vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.jXT0A"  title="原文::  Component "><a href="../vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.6lUmO"  title="原文::  Application "><a href="../vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.42UaWa"  title="原文::  Release Notes "><a href="../../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.21noUk"  title="原文::  Release 1.1.1 "><a href="../../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1kxXDU" title="原文 :  Release 1.1.0 "><a href="../../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.BccHo" title="原文 :  Release 1.2.0 "><a href="../../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.2jrmS7" title="原文 :  &gt; Navigate the UI &gt; Verrazzano &gt; Client Configuration "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>UIのナビゲート</a> > <a href='../index.html'>Verrazzano</a> > クライアント構成</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.3y0nQG"  title="原文:: Client Configuration"><a href="index.html#client-configuration">クライアント構成</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.3e9DVW"  title="原文:: Client Configuration">クライアント構成</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.3y0nQG.1"  title="原文:: Client Configuration"><a href="index.html#client-configuration">クライアント構成</a></span>
+<ul>
+<li><span class="merged" id="index.4HkJjT" title="原文 : Authentication with Managed Kubernetes Clusters"><a href="index.html#authentication-with-managed-kubernetes-clusters">管理対象Kubernetesクラスタでの認証</a></span></li>
+<li><span class="merged" id="index.3yVZAc"  title="原文:: Verify Connectivity"><a href="index.html#verify-connectivity">接続の検証</a></span></li>
+</ul>
+</li>
+</ul>
+<h3 id="client-configuration"><span class="merged" id="index.3e9DVW.1"  title="原文:: Client Configuration">クライアント構成</span></h3>
+<p><span class="merged" id="index.2rwCPV.spl1" title="原文 : Client Configuration helps you get the necessary connectivity to your Kubernetes cluster."><code>Client Configuration</code>は、Kubernetesクラスタへの必要な接続を取得するのに役立ちます。</span> <span class="merged" id="index.2rwCPV.spl2" title="原文 : Use the Kubernetes Cluster Type field to select the target Kubernetes cluster type to show instructions for configuring kubectl to successfully connect to the cluster."><code>Kubernetes Cluster Type</code>フィールドを使用してターゲットKubernetesクラスタ・タイプを選択し、クラスタに正常に接続するように<code>kubectl</code>を構成する手順を示します。</span> </p>
+<ul>
+<li><span class="merged" id="index.3p4qKj" title="原文 : The Kubectl Executable to Use field tells the WKT UI application where to find the correct version of kubectl to use."><code>Kubectl Executable to Use</code>フィールドは、使用する<code>kubectl</code>の正しいバージョンを検索するWKT UIアプリケーションに指示します。</span></li>
+<li><span class="merged" id="index.qhv9R" title="原文 : By using the Kubernetes Client Config File(s) field, you can specify a different Kubernetes client configuration file instead of, or in addition to, the default .kube/config file from your home directory."><code>Kubernetes Client Config File(s)</code>フィールドを使用すると、ホーム・ディレクトリのデフォルトの<code>.kube/config</code>ファイルではなく、またはそれに加えて別のKubernetesクライアント構成ファイルを指定できます。</span></li>
+<li><span class="merged" id="index.463bth" title="原文 : For environments where the client is configured to connect to multiple clusters, use the Kubernetes Config Context to Use field to specify the configuration file&rsquo;s context associated with the cluster to which you want to connect.">クライアントが複数のクラスタに接続するように構成されている環境では、<code>Kubernetes Config Context to Use</code>フィールドを使用して、接続先のクラスタに関連付けられた構成ファイルのコンテキストを指定します。</span></li>
+</ul>
+<h4 id="authentication-with-managed-kubernetes-clusters"><span class="merged" id="index.2z4Nw0" title="原文 : Authentication with Managed Kubernetes Clusters">管理対象Kubernetesクラスタでの認証</span></h4>
+<p><span class="merged" id="index.rrGH2.spl1" title="原文 : Most cloud vendors require the use of their command-line tooling to authenticate kubectl connections to their managed Kubernetes clusters.">ほとんどのクラウド・ベンダーでは、コマンドライン・ツールを使用して、管理対象のKubernetesクラスタへの<code>kubectl</code>接続を認証する必要があります。</span> <span class="merged" id="index.rrGH2.spl2" title="原文 : For example, after kubectl is configured to connect to a Kubernetes cluster managed by the Oracle Kubernetes Engine (OKE), the Kubernetes client configuration file will have a section that looks similar to the one shown here.">たとえば、Oracle Kubernetes Engine (OKE)によって管理されるKubernetesクラスタに接続するように<code>kubectl</code>を構成すると、Kubernetesクライアント構成ファイルには、ここに示すようなセクションが含まれます。</span> </p>
+<pre tabindex="0"><code>users:
+- name: user-abcdefghi8d
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      command: oci
+      args:
+      - ce
+      - cluster
+      - generate-token
+      - --cluster-id
+      - ocid1.cluster.oc1.phx.aaaaaaaaahdirjdmcjfpogfkdhjsdhshssk2abcdefghijk2d
+      - --region
+      - us-phoenix-1
+      env: []
+</code></pre><p><span class="merged" id="index.3wc7as.spl1" title="原文 : This configuration causes each kubectl invocation that references this user definition to execute the oci command (the Oracle Cloud command-line tool) to get the credentials necessary to successfully authenticate to the cluster.">この構成により、このユーザー定義を参照する各<code>kubectl</code>起動によって、<code>oci</code>コマンド(Oracle Cloudコマンドライン・ツール)が実行され、クラスタへの認証に必要な資格証明が取得されます。</span> <span class="merged" id="index.3wc7as.spl2" title="原文 : If the oci executable is not in a directory in the PATH environment variable when the kubectl command is executed, then an error similar to the one shown here will occur."><code>kubectl</code>コマンドの実行時に<code>oci</code>実行可能ファイルが<code>PATH</code>環境変数内のディレクトリにない場合、ここに示すようなエラーが発生します。</span> </p>
+<pre tabindex="0"><code>Failed to verify Kubernetes client connectivity: Unable to verify Kubernetes client connectivity:
+Command failed: /Users/rpatrick/bin/kubectl version --short
+Unable to connect to the server: getting credentials: exec: executable oci not found
+
+It looks like you are trying to use a client-go credential plugin that is not installed.
+
+To learn more about this feature, consult the documentation available at:
+https://kubernetes.io/docs/reference/access-authn-authz/authentication/#client-go-credential-plugins.
+</code></pre><h4 id="verify-connectivity"><span class="merged" id="index.1O8ES7"  title="原文:: Verify Connectivity"> 接続の検証</span></h4>
+<p><span class="merged" id="index.2jG4dD" title="原文 : To verify the application configuration for connecting to the specified Kubernetes cluster, use the Verify Connectivity button on the Client Configuration page or Go &gt; Verify Kubernetes Client Connection.">指定したKubernetesクラスタに接続するためのアプリケーション構成を確認するには、<code>Client Configuration</code>ページまたは<code>Go</code> > <code>Verify Kubernetes Client Connection</code>の<code>Verify Connectivity</code>ボタンを使用します。</span></p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../vz-install/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../../js/learn.js?1667188184"></script>
+    <script src="../../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

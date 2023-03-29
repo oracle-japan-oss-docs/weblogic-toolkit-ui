@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="" name="description">
+
+
+    <link rel="icon" href="../../images/favicon.png" type="image/png">
+
+    <title>モデル :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/model/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.J7SgQ" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.lh2nR" title="原文 :  About the WKT UI Application "><a href="../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1BOvH"  title="原文::  Get Started "><a href="../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.13yXnz"  title="原文::  Prerequisites "><a href="../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.Qzxsg" title="原文 :  Install WKT UI "><a href="../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.4Jnisw" title="原文 :  Navigate the UI "><a href="../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.3Gno2l"  title="原文::  Project Settings "><a href="../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.1N9UHH"  title="原文::  Model "><a href="index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.3qTSnD"  title="原文::  Image "><a href="../image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.4bY0IR"  title="原文::  Kubernetes "><a href="../kubernetes/index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.3THfkn"  title="原文::  Client Configuration "><a href="../kubernetes/k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.1aGE18"  title="原文::  WebLogic Kubernetes Operator "><a href="../kubernetes/k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.1PECEA"  title="原文::  WebLogic Domain "><a href="../kubernetes/k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.16QtSR"  title="原文::  Ingress Controller "><a href="../kubernetes/k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.3NyJfo"  title="原文::  Verrazzano "><a href="../verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.2KnyWg"  title="原文::  Client Configuration "><a href="../verrazzano/vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3CQMCj"  title="原文::  Installation "><a href="../verrazzano/vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.2tel0O"  title="原文::  Component "><a href="../verrazzano/vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.1P56H4"  title="原文::  Application "><a href="../verrazzano/vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.30zvCT"  title="原文::  Developer Guide "><a href="../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.2BrmKx"  title="原文::  Release Notes "><a href="../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.1OysES"  title="原文::  Release 1.1.1 "><a href="../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1ntMQS" title="原文 :  Release 1.1.0 "><a href="../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.jtUdm" title="原文 :  Release 1.2.0 "><a href="../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.2eWc8S" title="原文 :  &gt; Navigate the UI &gt; Model "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../index.html'></a> > <a href='../index.html'>UIのナビゲート</a>&nbsp;>&nbsp;モデル</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.22P2vM"  title="原文:: Model"><a href="index.html#model">モデル</a></span></li>
+        <li><span class="merged" id="index.3vxsi"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+        <li><span class="merged" id="index.umgfh"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.PLtnx"  title="原文:: Model">モデル</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.22P2vM.1"  title="原文:: Model"><a href="index.html#model">モデル</a></span></li>
+<li><span class="merged" id="index.3vxsi.1"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+<li><span class="merged" id="index.umgfh.1"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span>
+<ul>
+<li><span class="merged" id="index.3pQ0bd"  title="原文:: Model Editor"><a href="index.html#model-editor">モデル・エディタ</a></span></li>
+<li><span class="merged" id="index.22v6hp"  title="原文:: Variables Editor"><a href="index.html#variables-editor">変数エディタ</a></span></li>
+<li><span class="merged" id="index.23pibW" title="原文 : Archive Editor"><a href="index.html#archive-editor">アーカイブ・エディタ</a></span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.NpGOr"  title="原文:: Validate Model"><a href="index.html#validate-model">モデルの検証</a></span></li>
+<li><span class="merged" id="index.1PnzFH"  title="原文:: Prepare Model"><a href="index.html#prepare-model">モデルの準備</a></span></li>
+</ul>
+<h3 id="model"><span class="merged" id="index.PLtnx.1"  title="原文:: Model">モデル</span></h3>
+<p><span class="merged" id="index.S2qKl.spl1" title="原文 : The Model section helps you work with WebLogic Deploy Tooling models for a WebLogic domain."><code>Model</code>セクションは、WebLogicドメインのWebLogic Deploy Toolingモデルの操作に役立ちます。</span> <span class="merged" id="index.S2qKl.spl2" title="原文 : A WebLogic Deploy Tooling model for a domain can include the following file types:">ドメインのWebLogic Deploy Toolingモデルには、次のファイル・タイプを含めることができます:</span> </p>
+<ul>
+<li><span class="merged" id="index.hDfPG" title="原文 : Model file - A declarative definition of the domain configuration.">モデル・ファイル - ドメイン構成の宣言的な定義。</span></li>
+<li><span class="merged" id="index.2s029x.spl1" title="原文 : Variable file - A property file that maps names to values.">変数ファイル - 名前を値にマップするプロパティ・ファイル。</span> <span class="merged" id="index.2s029x.spl2" title="原文 : These names can be referenced from the model file to allow a model to be used across environments by applying the variable file for a particular environment to the model.">これらの名前はモデル・ファイルから参照でき、特定の環境の変数ファイルをモデルに適用することで、モデルを環境全体で使用できます。</span> </li>
+<li><span class="merged" id="index.1HY2u2" title="原文 : Archive file - A ZIP file containing application binaries and other files and directories needed to run the domain.">アーカイブ・ファイル - ドメインの実行に必要なアプリケーション・バイナリおよびその他のファイルおよびディレクトリを含むZIPファイル。</span></li>
+</ul>
+<p><span class="merged" id="index.2UCcIc" title="原文 : For more information about WebLogic Deploy Tooling models, see Metadata Model and Archive File in the WebLogic Deploy Tooling documentation.">WebLogic Deploy Toolingモデルの詳細は、WebLogic Deploy Toolingドキュメントの<a href="https://oracle.github.io/weblogic-deploy-tooling/concepts/model/">「Metadataモデル」</a>および<a href="https://oracle.github.io/weblogic-deploy-tooling/concepts/archive/">「アーカイブ・ファイル」</a>を参照してください。</span></p>
+<h3 id="design-view"><span class="merged" id="index.4fUZXo"  title="原文:: Design View"> 設計ビュー</span></h3>
+<p><span class="merged" id="index.3Dp6u9.spl1" title="原文 : The Design View is provided through integration with the WebLogic Remote Console."><code>Design View</code>は、<a href="https://github.com/oracle/weblogic-remote-console/releases">WebLogic Remote Console</a>との統合によって提供されます。</span> <span class="merged" id="index.3Dp6u9.spl2" title="原文 : For version details, see Prerequisites.">バージョンの詳細は、<a href="../../setup/prerequisites/index.html">「前提条件」</a>を参照してください。</span> <span class="merged" id="index.3Dp6u9.spl3" title="原文 : Upon first access, provide the location of the Remote Console installation directory, then click Start WebLogic Remote Console.">初回アクセス時に、リモート・コンソールのインストール・ディレクトリのロケーションを指定し、<strong>「WebLogic Remote Consoleの起動」</strong>をクリックします。</span> </p>
+<p><span class="merged" id="index.3GjFVX.spl1" title="原文 : Use the Model Design View pages to create or edit your WDT model files.">モデル<code>Design View</code>ページを使用して、WDTモデル・ファイルを作成または編集します。</span> <span class="merged" id="index.3GjFVX.spl2" title="原文 : For reference, see WDT Model Files in the Remote Console documentation.">参照方法については、リモート・コンソールのドキュメントにある<a href="https://oracle.github.io/weblogic-remote-console/userguide/providers/wdt-model/">「WDTモデル・ファイル」</a>を参照してください。</span> <span class="merged" id="index.3GjFVX.spl3" title="原文 : In addition, use the Help (?) icon to the left of each field to access summary and detailed help for the field.">また、各フィールドの左側にあるヘルプ(?)アイコンを使用して、フィールドのサマリーと詳細ヘルプにアクセスします。</span> <span class="merged" id="index.3GjFVX.spl4" title="原文 : Or, click the ? icon in the top right of the content pane to toggle the view of the reference information for all of the fields displayed on the page.">または、コンテンツ・ペインの右上にある?アイコンをクリックして、ページに表示されるすべてのフィールドの参照情報の表示を切り替えます。</span> </p>
+<p><span class="merged" id="index.2FX5sA.spl1" title="原文 : The WDT model files that you configure will be reflected in the Code View.">構成するWDTモデル・ファイルは、<code>Code View</code>に反映されます。</span> <span class="merged" id="index.2FX5sA.spl2" title="原文 : Using the Model Design View pages, if you select the &ldquo;circle/arrow&rdquo; icon beside a field, a dialog appears with the option of setting the field to a variable.">モデル<code>Design View</code>ページを使用すると、フィールドの横の円/矢印アイコンを選択すると、フィールドを変数に設定するオプションを含むダイアログが表示されます。</span> <span class="merged" id="index.2FX5sA.spl3" title="原文 : The variable will show up in both the model and the variables editor on the Code View page.">変数は、<code>Code View</code>ページのモデル・エディタと変数エディタの両方に表示されます。</span> <span class="merged" id="index.2FX5sA.spl4" title="原文 : Likewise, when adding an application, you supply the path to the EAR, WAR, or JAR file (or directory); that path will be put in the archive editor on the Code View page.">同様に、アプリケーションを追加する場合、EAR、WARまたはJARファイル(またはディレクトリ)へのパスを指定します。そのパスは、<code>Code View</code>ページのアーカイブ・エディタに配置されます。</span> </p>
+<p><span class="merged" id="index.22gzmP.spl1" title="原文 : Note that if you create a new model using the Design View pages, then the Design View will insert the AdminUserName and AdminPassword fields into the domainInfo section of the model with their values set to variables whose values you will need to provide."><code>Design View</code>ページを使用して新しいモデルを作成する場合、<code>Design View</code>はモデルの<code>domainInfo</code>セクションに<code>AdminUserName</code>および<code>AdminPassword</code>フィールドを挿入し、その値が値を指定する必要がある変数に設定されます。</span> <span class="merged" id="index.22gzmP.spl2" title="原文 : This is intended to help you create a domain with all of the required fields.">これは、すべての必須フィールドを含むドメインを作成するのに役立ちます。</span> </p>
+<h3 id="code-view"><span class="merged" id="index.2f1R4W"  title="原文:: Code View">コード・ビュー</span></h3>
+<p><span class="merged" id="index.27Kios.spl1" title="原文 : Using an IDE-like layout, the Code View provides editor panes for editing the model, variables, and archive files, each of which support creating and editing the domain&rsquo;s WDT files.">IDEに似たレイアウトを使用すると、<code>Code View</code>には、モデル、変数およびアーカイブ・ファイルを編集するためのエディタ・ペインが用意されています。これらの各ペインでは、ドメインのWDTファイルの作成および編集がサポートされています。</span> <span class="merged" id="index.27Kios.spl2" title="原文 : When working with an editor, there are several things to keep in mind:">エディタを操作するときは、次の点に注意してください:</span> </p>
+<ul>
+<li><span class="merged" id="index.1jZgyw" title="原文 : When working with a WKT Project that has no associated WDT file for storing the data, entering data into an editor will cause a new WDT file with the editor&rsquo;s current content to be created and associated with the project.">データを格納するためのWDTファイルが関連付けられていないWKTプロジェクトで作業する場合、エディタにデータを入力すると、エディタの現在のコンテンツが作成され、プロジェクトに関連付けられます。</span></li>
+<li><span class="merged" id="index.1XYl4" title="原文 : Changes made in the editor are buffered in memory until the WKT Project is saved.">エディタで行われた変更は、WKTプロジェクトが保存されるまでメモリーにバッファされます。</span></li>
+<li><span class="merged" id="index.SnZeZ.spl1" title="原文 : Adding, deleting, or modifying data in the variable or archive editors will not change the model references.">変数エディタまたはアーカイブ・エディタでデータを追加、削除または変更しても、モデル参照は変更され<em>ません</em>。</span> <span class="merged" id="index.SnZeZ.spl2" title="原文 : You will need to make sure that the model references are accurate and up to date.">モデル参照が正確で最新であることを確認する必要があります。</span> </li>
+</ul>
+<p><span class="merged" id="index.4Iuik2" title="原文 : While it is possible to use the WKT UI application to create the files from scratch, the File &gt; Add Model menu supports adding existing files or using the WebLogic Deploy Tooling&rsquo;s Discover Domain Tool to create a model of an existing domain.">WKT UIアプリケーションを使用してファイルを最初から作成することは可能ですが、<code>File > Add Model</code>メニューでは、既存のファイルの追加、またはWebLogic Deploy Toolingの<a href="https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/discover/">Discover Domain Tool</a>を使用した既存のドメインのモデルの作成がサポートされています。</span></p>
+
+<div class="notices note" ><p><span class="merged" id="index.3wHfMq" title="原文 : While WebLogic Deploy Tooling supports using multiple model, variables, or archive files to describe a single domain, the current release of WKT supports only one WDT model file, one WDT variables file, and one WDT archive file for describing the domain.">WebLogic Deploy Toolingでは単一のドメインを記述するために複数のモデル、変数またはアーカイブ・ファイルの使用がサポートされていますが、現在のリリースのWKTでは、1つのWDTモデル・ファイル、1つのWDT変数ファイル、およびドメインを記述するための1つのWDTアーカイブ・ファイルが<em>「のみ」</em>サポートされます。</span></p>
+</div>
+
+<h4 id="model-editor"><span class="merged" id="index.4IRkVd"  title="原文:: Model Editor">モデル・エディタ</span></h4>
+<p><span class="merged" id="index.yZWY7.spl1" title="原文 : In Code View, the model editor is just to the right of the navigation pane."><code>Code View</code>では、モデル・エディタはナビゲーション・ペインのすぐ右にあります。</span> <span class="merged" id="index.yZWY7.spl2" title="原文 : This editor displays the current model file associated with the WKT Project file.">このエディタには、WKTプロジェクト・ファイルに関連付けられた現在のモデル・ファイルが表示されます。</span> <span class="merged" id="index.yZWY7.spl3" title="原文 : Typing model content into the editor will result in a new model file being added to the project the next time the project is saved.">モデル・コンテンツをエディタに入力すると、次回プロジェクトが保存されたときに、新しいモデル・ファイルがプロジェクトに追加されます。</span> </p>
+<p><span class="merged" id="index.1sdi05" title="原文 : The current release has the following limitations:">現在のリリースには、次の制限があります:</span></p>
+<ul>
+<li><span class="merged" id="index.2hkyd2" title="原文 : Model files must be in YAML format.">モデル・ファイルはYAML形式である必要があります。</span></li>
+<li><span class="merged" id="index.3pFtAT" title="原文 : Model files must exist directly on the file system and not inside an archive, such as in a ZIP file; any model file inside an archive is ignored by the application.">モデル・ファイルはファイル・システムに直接存在し、アーカイブ内(ZIPファイル内など)には存在する必要があります。アーカイブ内のモデル・ファイルはアプリケーションによって無視されます。</span></li>
+</ul>
+<h4 id="variables-editor"><span class="merged" id="index.4frkqJ"  title="原文:: Variables Editor">変数エディタ</span></h4>
+<p><span class="merged" id="index.42tfhG.spl1" title="原文 : The WDT variables editor is in the upper right pane of the Code View page.">WDT変数エディタは、<code>Code View</code>ページの右上ペインにあります。</span> <span class="merged" id="index.42tfhG.spl2" title="原文 : It supports editing any existing name-value pairs, as well as adding or removing name-value pairs.">既存の名前と値のペアの編集、および名前と値のペアの追加または削除がサポートされています。</span> </p>
+<p><span class="merged" id="index.3XZHyI.spl1" title="原文 : To reference a variable from the model, you must set the value of the desired model file to a variable reference.">モデルから変数を参照するには、目的のモデル・ファイルの値を変数参照に設定する必要があります。</span> <span class="merged" id="index.3XZHyI.spl2" title="原文 : For example, the model snippet shown here references a variable named httpPort.">たとえば、ここに示すモデル・スニペットは、<code>httpPort</code>という名前の変数を参照します。</span> </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">topology</span>:
+    <span style="color:#f92672">Name</span>: <span style="color:#ae81ff">tododomain</span>
+    <span style="color:#f92672">ProductionModeEnabled</span>: <span style="color:#66d9ef">true</span>
+    <span style="color:#f92672">Cluster</span>:
+        <span style="color:#f92672">mycluster</span>:
+            <span style="color:#f92672">DynamicServers</span>:
+                <span style="color:#f92672">ServerNamePrefix</span>: <span style="color:#ae81ff">Server_</span>
+                <span style="color:#f92672">DynamicClusterSize</span>: <span style="color:#ae81ff">10</span>
+                <span style="color:#f92672">ServerTemplate</span>: <span style="color:#ae81ff">mysrvtemplate</span>
+    <span style="color:#f92672">ServerTemplate</span>:
+        <span style="color:#f92672">mysrvtemplate</span>:
+            <span style="color:#f92672">ListenPort</span>: <span style="color:#e6db74">&#39;@@PROP:httpPort@@&#39;</span>
+            <span style="color:#f92672">Cluster</span>: <span style="color:#ae81ff">mycluster</span>
+
+</code></pre></div><p><span class="merged" id="index.1VSiQm" title="原文 : When working with this model file, WebLogic Deploy Tooling expects the httpPort variable to be defined in the model&rsquo;s variables file, as shown here:">このモデル・ファイルを操作する場合、WebLogic Deploy Toolingでは、次に示すように、モデルの変数ファイルに<code>httpPort</code>変数が定義されていることが想定されます:</span></p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">httpPort = 7001
+</code></pre><h4 id="archive-editor"><span class="merged" id="index.47akCJ" title="原文 : Archive Editor">アーカイブ・エディタ</span></h4>
+<p><span class="merged" id="index.3ByeS2.spl1" title="原文 : The WDT archive editor is in the lower right pane of the Code View page.">WDTアーカイブ・エディタは、<code>Code View</code>ページの右下ペインにあります。</span> <span class="merged" id="index.3ByeS2.spl2" title="原文 : It supports adding content to and removing content from the archive file.">アーカイブ・ファイルに対するコンテンツの追加および削除をサポートします。</span> <span class="merged" id="index.3ByeS2.spl3" title="原文 : While updating content in the archive is not supported directly by the archive editor, the archive editor safely supports multiple operations on the same entry.">アーカイブ内のコンテンツの更新はアーカイブ・エディタによって直接サポートされませんが、アーカイブ・エディタは、同じエントリに対する複数の操作を安全にサポートします。</span> <span class="merged" id="index.3ByeS2.spl4" title="原文 : As such, combining a remove operation followed by the corresponding add operation will effectively replace an entry.">そのため、<code>remove</code>操作の後に対応する<code>add</code>操作を組み合せると、エントリは効果的に置き換えられます。</span> </p>
+<p><span class="merged" id="index.1VZ727.spl1" title="原文 : To add content to the archive file, use the plus (+) button in the archive editor title bar and follow the prompts to choose the type of content to add and select the corresponding file or directory.">アーカイブ・ファイルにコンテンツを追加するには、アーカイブ・エディタのタイトル・バーのプラス(<code>+</code>)ボタンを使用し、プロンプトに従って、追加するコンテンツのタイプを選択し、対応するファイルまたはディレクトリを選択します。</span> <span class="merged" id="index.1VZ727.spl2" title="原文 : For example, to add a WAR file called todo.war to the archive, do the following:">たとえば、<code>todo.war</code>というWARファイルをアーカイブに追加するには、次を実行します:</span> </p>
+<ol>
+<li><span class="merged" id="index.238tsF" title="原文 : On the archive editor title bar, click +.">アーカイブ・エディタのタイトル・バーで、<code>+</code>をクリックします。</span></li>
+<li><span class="merged" id="index.8IJUc" title="原文 : In the resulting dialog, choose Application File from the list and click OK.">表示されるダイアログで、リストから<code>Application File</code>を選択し、<code>OK</code>をクリックします。</span></li>
+<li><span class="merged" id="index.284dzr" title="原文 : In the resulting file chooser dialog, select the todo.war file and click Select.">表示されるファイル・チューザ・ダイアログで、<code>todo.war</code>ファイルを選択し、<code>Select</code>をクリックします。</span></li>
+</ol>
+<p><span class="merged" id="index.4Q2xqE.spl1" title="原文 : This will result in the file structure wlsdeploy/applications/todo.war being added to the archive editor pane.">これにより、ファイル構造<code>wlsdeploy/applications/todo.war</code>がアーカイブ・エディタ・ペインに追加されます。</span> <span class="merged" id="index.4Q2xqE.spl2" title="原文 : At this point, the application has not created or modified the archive file; it is simply storing the data it needs about the archive path to the added entry and the file path where the content is found.">この時点で、アプリケーションはアーカイブ・ファイルを作成または変更していません。単に、追加したエントリへのアーカイブ・パスおよびコンテンツが検出されるファイル・パスに必要なデータを格納します。</span> <span class="merged" id="index.4Q2xqE.spl3" title="原文 : Saving the WKT Project will update the archive to reflect the buffered operations performed in the editor.">WKTプロジェクトを保存すると、エディタで実行されたバッファ処理を反映するようにアーカイブが更新されます。</span> </p>
+
+<div class="notices note" ><p><span class="merged" id="index.iQXIh" title="原文 : Don&rsquo;t forget to add the application to the model and set its SourcePath attribute to the path in the archive where it can be found, as shown in the following model file snippet.">次のモデル・ファイル・スニペットに示すように、モデルにアプリケーションを追加し、その<code>SourcePath</code>属性をアーカイブ内のパスに設定することを忘れないでください。</span></p>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">appDeployments</span>:
+    <span style="color:#f92672">Application</span>:
+        <span style="color:#f92672">todo</span>:
+            <span style="color:#f92672">SourcePath</span>: <span style="color:#ae81ff">wlsdeploy/applications/todo.war</span>
+            <span style="color:#f92672">ModuleType</span>: <span style="color:#ae81ff">war</span>
+            <span style="color:#f92672">Target</span>: <span style="color:#ae81ff">mycluster</span>
+</code></pre></div><p><span class="merged" id="index.t7JPb.spl1" title="原文 : To remove content from the archive file, select the content to remove in the archive editor pane and click the minus (-) button in the archive editor title bar.">アーカイブ・ファイルからコンテンツを削除するには、削除するコンテンツをアーカイブ・エディタ・ペインで選択し、アーカイブ・エディタのタイトル・バーのマイナス(<code>-</code>)ボタンをクリックします。</span> <span class="merged" id="index.t7JPb.spl2" title="原文 : Don&rsquo;t forget to remove any reference to this content from the model file."><em>モデル・ファイルからこのコンテンツへの参照を削除することを忘れないでください。</em></span> </p>
+<h4 id="validate-model"><span class="merged" id="index.21W1Ds"  title="原文:: Validate Model">モデルの検証</span></h4>
+<p><span class="merged" id="index.3Gz3qc.spl1" title="原文 : Validate Model invokes the WDT Validate Model Tool, which validates that the model and its related artifacts are well-formed and provides help on the valid attributes and subfolders for a particular model location."><code>Validate Model</code>は、WDT <a href="https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/validate/">Validate Model Tool</a>を起動します。これは、モデルとその関連アーティファクトが整形式であることをバリデートし、特定のモデルのロケーションの有効な属性およびサブフォルダに関するヘルプを提供します。</span> <span class="merged" id="index.3Gz3qc.spl2" title="原文 : This action is available by using the Validate Model button on the Model page and by selecting Go &gt; Validate Model Files.">このアクションを使用するには、<code>Model</code>ページの<code>Validate Model</code>ボタンを使用し、<code>Go</code> > <code>Validate Model Files</code>を選択します。</span> </p>
+<h4 id="prepare-model"><span class="merged" id="index.3GeWiy"  title="原文:: Prepare Model">モデルの準備</span></h4>
+<p><span class="merged" id="index.3pChST.spl1" title="原文 : Prepare Model invokes the WDT Prepare Model Tool to modify the model to work in a Kubernetes cluster with WebLogic Kubernetes Operator or Verrazzano installed."><code>Prepare Model</code>は、WebLogic Kubernetes OperatorまたはVerrazzanoがインストールされたKubernetesクラスタで動作するようにモデルを変更するために、WDT <a href="https://oracle.github.io/weblogic-deploy-tooling/userguide/tools/prepare/">Prepare Model Tool</a>を起動します。</span> <span class="merged" id="index.3pChST.spl2" title="原文 : This action is available by using the Prepare Model button on the Model and Kubernetes WebLogic Domain pages and by selecting Go &gt; Prepare Model for Kubernetes.">このアクションを使用するには、<code>Model</code>および<code>Kubernetes WebLogic Domain</code>ページの<code>Prepare Model</code>ボタンを使用し、<code>Go</code> > <code>Prepare Model for Kubernetes</code>を選択します。</span> <span class="merged" id="index.3pChST.spl3" title="原文 : It is also possible to run Prepare Model during the Create Image action, though typically it is best to run Prepare Model explicitly, prior to moving to the Image section."><code>Create Image</code>アクション中に<code>Prepare Model</code>を実行することもできますが、通常、<code>Image</code>セクションに移動する前に<code>Prepare Model</code>を明示的に実行することをお薦めします。</span> </p>
+<p><span class="merged" id="index.3xuAWo" title="原文 : Prepare Model does the following:"><code>Prepare Model</code>は次のことを行います:</span></p>
+<ol>
+<li><span class="merged" id="index.3mYwOY" title="原文 : Removes model sections and fields that are not compatible with the target environment.">ターゲット環境と互換性がないモデル・セクションおよびフィールドを削除します。</span></li>
+<li><span class="merged" id="index.3kO2tS" title="原文 : Replaces endpoint values with model tokens that reference variables.">エンドポイント値を、変数を参照するモデル・トークンに置き換えます。</span></li>
+<li><span class="merged" id="index.4FbIan" title="原文 : Replaces credential values with model tokens that reference either a field in a Kubernetes secret or a variable.">資格証明値を、Kubernetesシークレットまたは変数のフィールドを参照するモデル・トークンに置き換えます。</span></li>
+<li><span class="merged" id="index.yVtL4" title="原文 : Provides default values for fields displayed in the application&rsquo;s variable, variable overrides, and secret editors.">アプリケーションの変数、変数のオーバーライドおよびシークレット・エディタに表示されるフィールドのデフォルト値を指定します。</span></li>
+<li><span class="merged" id="index.2zmHTn" title="原文 : Extracts topology information to the application that it uses to generate the resource file used to deploy the domain.">ドメインのデプロイに使用されるリソース・ファイルの生成に使用するアプリケーションにトポロジ情報を抽出します。</span></li>
+</ol>
+<p><span class="merged" id="index.4R1IWJ" title="原文 : For more information, see the WDT model tokens documentation.">詳細は、WDT <a href="https://oracle.github.io/weblogic-deploy-tooling/concepts/model/#model-tokens">「モデル・トークン」</a>のドキュメントを参照してください。</span></p>
+<p><span class="merged" id="index.3NG3JB" title="原文 : In replacing credential values, Prepare Model must handle the replacement differently for the &ldquo;Domain in Image&rdquo; and &ldquo;Model in Image&rdquo; domain locations:">資格証明値を置換する場合、<code>Prepare Model</code>は、"Domain in Image"および"Model in Image" <a href="../project-settings/index.html#choosing-a-domain-location">ドメインのロケーション</a>の置換を別の方法で処理する必要があります:</span></p>
+<ul>
+<li>
+<p><span class="merged" id="index.1HRb8S.spl1" title="原文 : With &ldquo;Domain in Image&rdquo;, the WebLogic Image Tool creates the domain while creating the image.">"Domain in Image"では、イメージの作成時にWebLogic Image Toolによってドメインが作成されます。</span> <span class="merged" id="index.1HRb8S.spl2" title="原文 : As such, it has no knowledge of Kubernetes so the token replacement uses variable tokens so that domain creation has access to the actual credential values.">そのため、Kubernetesの知識がないため、トークン置換では変数トークンが使用され、ドメイン作成で実際の資格証明値にアクセスできるようになります。</span> <span class="merged" id="index.1HRb8S.spl3" title="原文 : You must ensure that all variables have valid values prior to running Create Primary Image."><code>Create Primary Image</code>を実行する前に、すべての変数に有効な値があることを確認する必要があります。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.17igQ.spl1" title="原文 : For &ldquo;Model in Image&rdquo;, the domain is created at runtime by the WebLogic Kubernetes Operator running in a Kubernetes cluster.">"Model in Image"の場合、ドメインは、Kubernetesクラスタで実行されているWebLogic Kubernetes Operatorによって実行時に作成されます。</span> <span class="merged" id="index.17igQ.spl2" title="原文 : As such, token replacement uses secret tokens for all credential fields.">そのため、トークン置換では、すべての資格証明フィールドにシークレット・トークンが使用されます。</span> <span class="merged" id="index.17igQ.spl3" title="原文 : You must to be sure to provide values for all secret reference fields using the WebLogic Domain section&rsquo;s Secrets pane so that the required secrets get populated correctly during domain deployment.">必要なシークレットがドメイン・デプロイメント中に正しく移入されるように、<code>WebLogic Domain</code>セクションの<code>Secrets</code>ペインを使用して、すべてのシークレット参照フィールドに値を指定する必要があります。</span> <span class="merged" id="index.17igQ.spl4" title="原文 : For more information, see WebLogic Domain.">詳細については、<a href="../kubernetes/k8s-weblogic-domain/index.html">「WebLogicドメイン」</a>を参照してください。</span> </p>
+</li>
+</ul>
+
+<div class="notices note" ><p><span class="merged" id="index.q7dUh.spl1" title="原文 : The application tries to preserve any values from the model and variable files that Prepare Model replaces with secret tokens.">アプリケーションは、<code>Prepare Model</code>がシークレット・トークンに置き換わるモデルおよび変数ファイルの値を保持しようとします。</span> <span class="merged" id="index.q7dUh.spl2" title="原文 : The current release is limited by the behavior of the underlying WDT Prepare Model Tool in that all passwords are not retained and must be re-entered in the appropriate location.">現在のリリースは、すべてのパスワードが保持されず、適切なロケーションに再入力する必要があるという、基礎となるWDT Prepare Model Toolの動作によって制限されます。</span> </p>
+</div>
+
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../project-settings/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../image/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../js/learn.js?1667188184"></script>
+    <script src="../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>

@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="Install and configure an ingress controller." name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>イングレス・コントローラ :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../../css/nucleus.css?1667188184" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1667188184" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1667188184" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1667188184" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1667188184" rel="stylesheet">
+    <link href="../../../css/theme.css?1667188184" rel="stylesheet">
+    <link href="../../../css/tabs.css?1667188184" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1667188184" rel="stylesheet">
+    
+    <link href="../../../css/theme-wktui.css?1667188184" rel="stylesheet">
+
+    <script src="../../../js/jquery-3.3.1.min.js?1667188184"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.cxBaP" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1667188184"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1667188184"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1667188184"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.3t7iAC" title="原文 :  About the WKT UI Application "><a href="../../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.1F6RvT"  title="原文::  Get Started "><a href="../../../setup/index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.1ddh3l"  title="原文::  Prerequisites "><a href="../../../setup/prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.4Q4vj3" title="原文 :  Install WKT UI "><a href="../../../setup/install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.2XQTja" title="原文 :  Navigate the UI "><a href="../../index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.4Ha16W"  title="原文::  Project Settings "><a href="../../project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.4YNSyK"  title="原文::  Model "><a href="../../model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.47JMGa"  title="原文::  Image "><a href="../../image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.Y6Pqd"  title="原文::  Kubernetes "><a href="../index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.1HAPv1"  title="原文::  Client Configuration "><a href="../k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.3Uzstk"  title="原文::  WebLogic Kubernetes Operator "><a href="../k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.3RGRku"  title="原文::  WebLogic Domain "><a href="../k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.183xbd"  title="原文::  Ingress Controller "><a href="index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.3NgGix"  title="原文::  Verrazzano "><a href="../../verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.2NQ4QF"  title="原文::  Client Configuration "><a href="../../verrazzano/vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3zhEZq"  title="原文::  Installation "><a href="../../verrazzano/vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.3c1YBT"  title="原文::  Component "><a href="../../verrazzano/vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.4NqhrL"  title="原文::  Application "><a href="../../verrazzano/vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.42UaWa"  title="原文::  Release Notes "><a href="../../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.21noUk"  title="原文::  Release 1.1.1 "><a href="../../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1kxXDU" title="原文 :  Release 1.1.0 "><a href="../../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.BccHo" title="原文 :  Release 1.2.0 "><a href="../../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.rjNGa" title="原文 :  Public Slack #weblogic"><a href="https://weblogic-slack-inviter.herokuapp.com/"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.1R0CuQ" title="原文 :  &gt; Navigate the UI &gt; Kubernetes &gt; Ingress Controller "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>UIのナビゲート</a> > <a href='../index.html'>Kubernetes</a> > イングレス・コントローラ</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><span class="merged" id="index.2qlJ8K"  title="原文:: Contents"><a href="index.html#contents">目次</a></span></li>
+        <li><span class="merged" id="index.4q26Y"  title="原文:: Ingress Controller"><a href="index.html#ingress-controller">イングレス・コントローラ</a></span></li>
+        <li><span class="merged" id="index.3vxsi"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span></li>
+        <li><span class="merged" id="index.umgfh"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+        <li><span class="merged" id="index.3LRQBM" title="原文 : Install Ingress Controller"><a href="index.html#install-ingress-controller">イングレス・コントローラのインストール</a></span></li>
+        <li><span class="merged" id="index.3rn8R8" title="原文 : Update Ingress Routes"><a href="index.html#update-ingress-routes">イングレス・ルートの更新</a></span></li>
+        <li><span class="merged" id="index.3FkGnd" title="原文 : Uninstall Ingress Controller"><a href="index.html#uninstall-ingress-controller">イングレス・コントローラのアンインストール</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.1IjYt4"  title="原文:: Ingress Controller">イングレス・コントローラ</span>
+            </h1>
+          
+
+        
+
+
+<h3 id="contents"><span class="merged" id="index.1Q34Zl"  title="原文:: Contents">目次</span></h3>
+<ul>
+<li><span class="merged" id="index.4q26Y.1"  title="原文:: Ingress Controller"><a href="index.html#ingress-controller">イングレス・コントローラ</a></span></li>
+<li><span class="merged" id="index.3vxsi.1"  title="原文:: Design View"><a href="index.html#design-view">設計ビュー</a></span>
+<ul>
+<li><span class="merged" id="index.4aLV4p" title="原文 : Ingress Controller Configuration"><a href="index.html#ingress-controller-configuration">イングレス・コントローラ構成</a></span></li>
+<li><span class="merged" id="index.14PAJj" title="原文 : TLS Secret for Ingress Routes"><a href="index.html#tls-secret-for-ingress-routes">イングレス・ルートのTLSシークレット</a></span></li>
+<li><span class="merged" id="index.zmfCs" title="原文 : Ingress Routes Configuration"><a href="index.html#ingress-routes-configuration">イングレス・ルート構成</a></span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.umgfh.1"  title="原文:: Code View"><a href="index.html#code-view">コード・ビュー</a></span></li>
+<li><span class="merged" id="index.3LRQBM.1" title="原文 : Install Ingress Controller"><a href="index.html#install-ingress-controller">イングレス・コントローラのインストール</a></span></li>
+<li><span class="merged" id="index.3rn8R8.1" title="原文 : Update Ingress Routes"><a href="index.html#update-ingress-routes">イングレス・ルートの更新</a></span></li>
+<li><span class="merged" id="index.3FkGnd.1" title="原文 : Uninstall Ingress Controller"><a href="index.html#uninstall-ingress-controller">イングレス・コントローラのアンインストール</a></span></li>
+</ul>
+<h3 id="ingress-controller"><span class="merged" id="index.1IjYt4.1"  title="原文:: Ingress Controller">イングレス・コントローラ</span></h3>
+<p><span class="merged" id="index.4Z9J15.spl1" title="原文 : This section supports two distinct functions related to an ingress controller.">この項では、イングレス・コントローラに関連する2つの異なる機能をサポートします。</span> <span class="merged" id="index.4Z9J15.spl2" title="原文 : First, it supports installing an ingress controller to a Kubernetes cluster.">まず、Kubernetesクラスタへのイングレス・コントローラのインストールをサポートします。</span> <span class="merged" id="index.4Z9J15.spl3" title="原文 : Second, it supports adding the necessary routes to an ingress controller to make a deployed WebLogic domain&rsquo;s endpoints accessible.">次に、デプロイ済のWebLogicドメインのエンドポイントにアクセスできるように、イングレス・コントローラに必要なルートの追加をサポートしています。</span> </p>
+<h3 id="design-view"><span class="merged" id="index.4fUZXo"  title="原文:: Design View"> 設計ビュー</span></h3>
+<p><span class="merged" id="index.3X739u.spl1" title="原文 : Design View helps you specify the data needed to install an ingress controller, if desired, and specify the data needed to expose one or more endpoints for a deployed WebLogic domain."><code>Design View</code>は、必要に応じてイングレス・コントローラのインストールに必要なデータを指定し、デプロイされたWebLogicドメインの1つ以上のエンドポイントを公開するために必要なデータを指定します。</span> <span class="merged" id="index.3X739u.spl2" title="原文 : This page contains three panes:">このページには3つのペインがあります:</span> </p>
+<ul>
+<li><span class="merged" id="index.4aLV4p.1" title="原文 : Ingress Controller Configuration"><a href="index.html#ingress-controller-configuration">イングレス・コントローラ構成</a></span></li>
+<li><span class="merged" id="index.14PAJj.1" title="原文 : TLS Secret for Ingress Routes"><a href="index.html#tls-secret-for-ingress-routes">イングレス・ルートのTLSシークレット</a></span></li>
+<li><span class="merged" id="index.zmfCs.1" title="原文 : Ingress Routes Configuration"><a href="index.html#ingress-routes-configuration">イングレス・ルート構成</a></span></li>
+</ul>
+<h4 id="ingress-controller-configuration"><span class="merged" id="index.vtw1Y" title="原文 : Ingress Controller Configuration">イングレス・コントローラ構成</span></h4>
+<p><span class="merged" id="index.MescZ.spl1" title="原文 : The most important field in this pane is the Ingress Provider field.">このペインの最も重要なフィールドは、<code>Ingress Provider</code>フィールドです。</span> <span class="merged" id="index.MescZ.spl2" title="原文 : This fields tells the WKT UI application with which of the supported ingress controllers it will need to work.">このフィールドは、WKT UIアプリケーションに、動作する必要があるサポート対象イングレス・コントローラを示します。</span> <span class="merged" id="index.MescZ.spl3" title="原文 : The current release supports two ingress controllers:">現在のリリースでは、次の2つのイングレス・コントローラがサポートされています:</span> </p>
+<ul>
+<li><span class="merged" id="index.1WOaCR"  title="原文:: NGINX">NGINX</span></li>
+<li><span class="merged" id="index.2SwHEO" title="原文 : Traefik">Traefik</span></li>
+</ul>
+<p><span class="merged" id="index.4TD454" title="原文 : To install the ingress controller, enable Install Ingress Controller.">イングレス・コントローラをインストールするには、<code>Install Ingress Controller</code>を有効にします。</span></p>
+<ul>
+<li><span class="merged" id="index.3ijJpc" title="原文 : To set the release name used by the Helm install process, use the Helm Release Name to Use field.">Helmインストール・プロセスで使用されるリリース名を設定するには、<code>Helm Release Name to Use</code>フィールドを使用します。</span></li>
+<li><span class="merged" id="index.30gOBl" title="原文 : Set the Kubernetes namespace to which the ingress controller should be installed with the Ingress Controller Namespace field."><code>Ingress Controller Namespace</code>フィールドを使用して、イングレス・コントローラをインストールする必要があるKubernetesネームスペースを設定します。</span></li>
+</ul>
+<p><span class="merged" id="index.1AolNA.spl1" title="原文 : The container image for the Traefik ingress controller resides in Docker Hub.">Traefikイングレス・コントローラのコンテナ・イメージは、Docker Hubにあります。</span> <span class="merged" id="index.1AolNA.spl2" title="原文 : Due to changes made to Docker Hub, anonymous pull requests are throttled.">Dockerハブが変更されたため、匿名プル・リクエストはスロットルされます。</span> <span class="merged" id="index.1AolNA.spl3" title="原文 : This can result in pull requests being denied when the Kubernetes cluster attempts to pull the image and start the container.">これにより、Kubernetesクラスタがイメージのプルを試行してコンテナを起動しようとすると、プル・リクエストが拒否されることがあります。</span> </p>
+<ul>
+<li><span class="merged" id="index.2MK6jl" title="原文 : To work around this limitation, enable the Use Docker Hub Secret field to provide login credentials for Docker Hub.">この制限を回避するには、<code>Use Docker Hub Secret</code>フィールドを有効にして、Dockerハブのログイン資格証明を指定します。</span></li>
+<li><span class="merged" id="index.2QEySn.spl1" title="原文 : The Docker Registry Secret Name field specifies the name of the Kubernetes pull secret to use when pulling the image."><code>Docker Registry Secret Name</code>フィールドは、イメージのプル時に使用するKubernetesプル・シークレットの名前を指定します。</span> <span class="merged" id="index.2QEySn.spl2" title="原文 : To create this secret, enable Create Docker Hub Secret and fill in the pull secret data in the Docker Hub Username, Docker Hub Password, and Docker Hub Email Address fields.">このシークレットを作成するには、<code>Create Docker Hub Secret</code>を有効にし、<code>Docker Hub Username</code>、<code>Docker Hub Password</code>および<code>Docker Hub Email Address</code>フィールドのプル・シークレット・データを入力します。</span> </li>
+<li><span class="merged" id="index.EXs6c" title="原文 : For the NGINX ingress controller, if you want to have SSL pass through the ingress route, enable Allow SSL pass through to target service.">NGINXイングレス・コントローラの場合、イングレス・ルートをSSLで渡す場合は、<code>Allow SSL pass through to target service</code>を有効にします。</span></li>
+</ul>
+<h4 id="tls-secret-for-ingress-routes"><span class="merged" id="index.4JYYM0" title="原文 : TLS Secret for Ingress Routes">イングレス・ルートのTLSシークレット</span></h4>
+<p><span class="merged" id="index.3FL7EE.spl1" title="原文 : Use this pane to configure the Transport Layer Security (TLS) secret containing the certificate and private key data that will be used by the ingress controller when establishing HTTPS connections from clients to the ingress controller.">このペインを使用して、クライアントからイングレス・コントローラへのHTTPS接続を確立する際に、イングレス・コントローラで使用される証明書および秘密キー・データを含むTransport Layer Security (TLS)シークレットを構成します。</span> <span class="merged" id="index.3FL7EE.spl2" title="原文 : The TLS connection will be terminated at the ingress controller, so traffic between the ingress controller and services/pods will not be encrypted.">TLS接続はイングレス・コントローラで終了されるため、イングレス・コントローラとサービス/ポッド間のトラフィックは暗号化されません。</span> <span class="merged" id="index.3FL7EE.spl3" title="原文 : In the current release, only a single TLS certificate is supported for the routes being defined.">現在のリリースでは、定義されているルートに対してサポートされるTLS証明書は1つのみです。</span> </p>
+<ul>
+<li><span class="merged" id="index.g57ip" title="原文 : To use TLS-enabled routes, enable Use Ingress TLS Secret and provide the secret name using the Ingress TLS Secret Name field.">TLS対応ルートを使用するには、<code>Use Ingress TLS Secret</code>を有効にし、<code>Ingress TLS Secret Name</code>フィールドを使用してシークレット名を指定します。</span></li>
+<li><span class="merged" id="index.1mHcXB" title="原文 : To have the application create this secret, enable Create Ingress TLS Secret.">アプリケーションでこのシークレットを作成するには、<code>Create Ingress TLS Secret</code>を有効にします。</span></li>
+<li><span class="merged" id="index.49FxR2" title="原文 : If you already have a certificate file and its corresponding private key file, then use the TLS Certificate File and TLS Private Key File fields to provide them.">証明書ファイルと対応する秘密キー・ファイルがすでにある場合は、<code>TLS Certificate File</code>および<code>TLS Private Key File</code>フィールドを使用して指定します。</span></li>
+<li><span class="merged" id="index.2Oxb2w" title="原文 : To create these files automatically, enable Generate a TLS Certificate and Private Key.">これらのファイルを自動的に作成するには、<code>Generate a TLS Certificate and Private Key</code>を有効にします。</span>
+<ul>
+<li><span class="merged" id="index.2gAJ3Q" title="原文 : Provide the path to the OpenSSL executable using the OpenSSL Executable to Use field."><code>OpenSSL Executable to Use</code>フィールドを使用して、OpenSSL実行可能ファイルへのパスを指定します。</span></li>
+<li><span class="merged" id="index.3WdfZe" title="原文 : Use the Subject to Use for the Generated TLS Certificate field to specify the data to put into the subject of the certificate."><code>Subject to Use for the Generated TLS Certificate</code>フィールドを使用して、証明書のサブジェクトに含めるデータを指定します。</span>
+<ul>
+<li><span class="merged" id="index.3ENO09" title="原文 : For example, if your ingress route will use the virtual host name www.myapp.com, you might specify the subject contents as /CN=www.myapp.com.">たとえば、イングレス・ルートで仮想ホスト名<code>www.myapp.com</code>を使用する場合は、件名の内容を<code>/CN=www.myapp.com</code>として指定できます。</span></li>
+<li><span class="merged" id="index.GbKFz" title="原文 : The subject data will support multiple key/value pairs using a comma-separated syntax, like /key1=value1,/key2=value2,/key3=value3.">サブジェクト・データは、<code>/key1=value1,/key2=value2,/key3=value3</code>などのカンマ区切り構文を使用して、複数のキー/バリューのペアをサポートします。</span></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="ingress-routes-configuration"><span class="merged" id="index.1dMG45" title="原文 : Ingress Routes Configuration">イングレス・ルート構成</span></h4>
+<p><span class="merged" id="index.1o5sev.spl1" title="原文 : Use the table in this section to define the ingress routes to be added by the application.">この項の表を使用して、アプリケーションによって追加されるイングレス・ルートを定義します。</span> <span class="merged" id="index.1o5sev.spl2" title="原文 : Note that this table does not currently display existing routes already defined."><em>この表に、すでに定義されている既存のルートは表示されません。</em></span> <span class="merged" id="index.1o5sev.spl3" title="原文 : Any routes defined in or removed from the table will happen in the WKT Project object.">表に定義または削除されたルートは、WKT Projectオブジェクトで発生します。</span> <span class="merged" id="index.1o5sev.spl4" title="原文 : When applying or updating the routes, only the fields currently in the table will be considered.">ルートを適用または更新する場合、現在表にあるフィールドのみが考慮されます。</span> <span class="merged" id="index.1o5sev.spl5" title="原文 : If the routes do not exist, then they will be added.">ルートが存在しない場合は、ルートが追加されます。</span> <span class="merged" id="index.1o5sev.spl6" title="原文 : If one or more of the routes already exists, then the application will warn you to confirm whether you want to update the existing route or routes before performing the operation.">1つ以上のルートがすでに存在する場合、操作を実行する前に既存のルートまたはルートを更新するかどうかを確認する警告が表示されます。</span> </p>
+<p><span class="merged" id="index.1QIb7q.spl1" title="原文 : To add a new route, click the plus (+) button in the table header.">新しいルートを追加するには、表ヘッダーのプラス( <code>+</code>)ボタンをクリックします。</span> <span class="merged" id="index.1QIb7q.spl2" title="原文 : To edit a route, use the edit button on the corresponding route row.">ルートを編集するには、対応するルート行の編集ボタンを使用します。</span> <span class="merged" id="index.1QIb7q.spl3" title="原文 : To remove a route, use the delete icon on the corresponding route row.">ルートを削除するには、対応するルート行の削除アイコンを使用します。</span> </p>
+<p><span class="merged" id="index.mOEeM" title="原文 : When editing a route:">ルートを編集する場合:</span></p>
+<ul>
+<li><span class="merged" id="index.2749Ic" title="原文 : Use the Name field to set the route name.">ルート名を設定するには、<code>Name</code>フィールドを使用します。</span></li>
+<li><span class="merged" id="index.FywiE" title="原文 : Use the Virtual Host and Path Expression fields to define the matching rules that determine which requests match this route."><code>Virtual Host</code>および<code>Path Expression</code>フィールドを使用して、このルートに一致するリクエストを決定する一致ルールを定義します。</span></li>
+<li><span class="merged" id="index.2CHVki.spl1" title="原文 : All requests in the defined rules are routed to the service specified by the Target Service field that resides in the namespace specified by the read-only Target Service Namespace field and the port specified by the Target Port field.">定義済ルール内のすべてのリクエストは、読取り専用<code>Target Service Namespace</code>フィールドで指定されたネームスペースに存在する<code>Target Service</code>フィールドおよび<code>Target Port</code>フィールドで指定されたポートによって指定されたサービスにルーティングされます。</span> <span class="merged" id="index.2CHVki.spl2" title="原文 : After the domain has been deployed, you can select the Target Service value from the drop-down list of available services in the WebLogic Kubernetes Operator domain&rsquo;s namespace.">ドメインのデプロイ後、WebLogic Kubernetes Operatorドメインのネームスペースで使用可能なサービスのドロップダウン・リストから<code>Target Service</code>値を選択できます。</span> <span class="merged" id="index.2CHVki.spl3" title="原文 : After the Target Service is selected, you can select the Target Port from the list of available ports in the selected target service."><code>Target Service</code>を選択した後、選択したターゲット・サービスで使用可能なポートのリストから<code>Target Port</code>を選択できます。</span> </li>
+<li><span class="merged" id="index.3Hdv5r" title="原文 : Specify the Transport Option for the ingress route:">イングレス・ルートの<code>Transport Option</code>を指定します:</span>
+<ul>
+<li><span class="merged" id="index.YVz0E" title="原文 : Select Plain HTTP for unencrypted traffic from the client through the ingress controller to the target service.">イングレス・コントローラを介したクライアントからターゲット・サービスへの暗号化されていないトラフィックの場合は、<code>Plain HTTP</code>を選択します。</span></li>
+<li><span class="merged" id="index.3aDtiK" title="原文 : Select SSL terminate at ingress controller for SSL terminating at the ingress controller and then unencrypted traffic from the ingress controller to the target service.">イングレス・コントローラで終了するSSLの場合は<code>SSL terminate at ingress controller</code>を選択し、イングレス・コントローラからターゲット・サービスへの暗号化されていないトラフィックを選択します。</span>
+<ul>
+<li><span class="merged" id="index.3zN2DX" title="原文 : Enable Is target service WebLogic Console? if the target service is the WebLogic Console service.">ターゲット・サービスが<code>WebLogic Console</code>サービスである場合は、<code>Is target service WebLogic Console?</code>を有効にします。</span></li>
+</ul>
+</li>
+<li><span class="merged" id="index.OYYH0" title="原文 : Select SSL pass through for SSL traffic to pass through the ingress controller and then terminate at the target service.">SSLトラフィックがイングレス・コントローラを通過してターゲット・サービスで終了するには、<code>SSL pass through</code>を選択します。</span>
+<ul>
+<li><span class="merged" id="index.wcwYH" title="原文 : If you select this option, you must also specify a valid DNS value in &lsquo;Virtual Host&rsquo;, and all SSL traffic from theVirtual Host will be routed to the target service.">このオプションを選択した場合は、仮想ホストで有効なDNS値も指定する必要があり、<code>Virtual Host</code>のすべてのSSLトラフィックがターゲット・サービスにルーティングされます。</span></li>
+<li><span class="merged" id="index.347Ozw" title="原文 : Make sure that the Target Port supports SSL."><code>Target Port</code>がSSLをサポートしていることを確認します。</span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><span class="merged" id="index.17wLnc.spl1" title="原文 : Use the Ingress Route Annotations table to add annotations to the ingress route, as needed.">必要に応じて、<code>Ingress Route Annotations</code>表を使用してイングレス・ルートに注釈を追加します。</span> <span class="merged" id="index.17wLnc.spl2" title="原文 : Do not remove any pre-populated annotations.">事前入力された注釈は削除しないでください。</span> </li>
+</ul>
+<h3 id="code-view"><span class="merged" id="index.2f1R4W"  title="原文:: Code View">コード・ビュー</span></h3>
+<p><span class="merged" id="index.2Anjw3.spl1" title="原文 : Code View displays shell scripts for installing an ingress controller and for updating ingress routes."><code>Code View</code>は、イングレス・コントローラのインストールおよびイングレス・ルートの更新のためのシェル・スクリプトを表示します。</span> <span class="merged" id="index.2Anjw3.spl2" title="原文 : It also displays the YAML definitions of the routes to be added, if applicable.">追加するルートのYAML定義も表示されます(該当する場合)。</span> </p>
+<p><span class="merged" id="index.1zxtnP.spl1" title="原文 : If it is not already selected, then use the Script Language drop-down menu to choose the desired scripting language.">まだ選択されていない場合は、<code>Script Language</code>ドロップダウン・メニューを使用して目的のスクリプト言語を選択します。</span> <span class="merged" id="index.1zxtnP.spl2" title="原文 : Note that the application is providing a working sample script simply to show how the process might be automated.">アプリケーションには、プロセスの自動化方法を示す作業サンプル・スクリプトが用意されています。</span> <span class="merged" id="index.1zxtnP.spl3" title="原文 : Before using the script, review the script and make any changes necessary for your environment.">スクリプトを使用する前に、スクリプトを確認し、環境に必要な変更を加えます。</span> <span class="merged" id="index.1zxtnP.spl4" title="原文 : One typical change that would be considered a best practice would be to change the script to accept either command-line arguments or externally set environment variables to specify any credentials required by the script to eliminate hard-coding the credentials in the script itself.">ベスト・プラクティスとみなされる一般的な変更の1つは、スクリプトを変更してコマンドライン引数を受け入れるか、またはスクリプト自体で資格証明をハード・コーディングしないようにスクリプトに必要な資格証明を指定するように環境変数を外部で設定することです。</span> <span class="merged" id="index.1zxtnP.spl5" title="原文 : This change is left as an exercise for you because different environments typically will have existing standards for securely handling such credentials.">通常、このような資格証明を安全に処理するための既存の標準が様々な環境にあるため、この変更は演習として残されます。</span> </p>
+<h3 id="install-ingress-controller"><span class="merged" id="index.2mJB8M" title="原文 : Install Ingress Controller">イングレス・コントローラのインストール</span></h3>
+<p><span class="merged" id="index.OfAa.spl1" title="原文 : Install Ingress Controller creates any namespace and secret specified and runs the ingress controller&rsquo;s Helm chart to install the ingress controller."><code>Install Ingress Controller</code>は、指定されたネームスペースおよびシークレットを作成し、イングレス・コントローラのHelmチャートを実行してイングレス・コントローラをインストールします。</span> <span class="merged" id="index.OfAa.spl2" title="原文 : You access this action by using the Install Ingress Controller button on the Ingress Controller page or the Go &gt; Install Ingress Controller menu item.">このアクションにアクセスするには、<code>Ingress Controller</code>ページまたは<code>Go</code> > <code>Install Ingress Controller</code>メニュー・アイテムにある<code>Install Ingress Controller</code>ボタンを使用します。</span> </p>
+<h3 id="update-ingress-routes"><span class="merged" id="index.2rxDn6" title="原文 : Update Ingress Routes">イングレス・ルートの更新</span></h3>
+<p><span class="merged" id="index.iDxss.spl1" title="原文 : Update Ingress Routes creates the TLS secret, if needed, and adds or updates the specified ingress routes."><code>Update Ingress Routes</code>は、必要に応じてTLSシークレットを作成し、指定されたイングレス・ルートを追加または更新します。</span> <span class="merged" id="index.iDxss.spl2" title="原文 : You access this action by using the Update Ingress Routes button on the Ingress Controller page or the Go &gt; Update Ingress Routes to Domain menu item.">このアクションにアクセスするには、<code>Ingress Controller</code>ページまたは<code>Go</code> > <code>Update Ingress Routes to Domain</code>メニュー・アイテムの<code>Update Ingress Routes</code>ボタンを使用します。</span> </p>
+<h3 id="uninstall-ingress-controller"><span class="merged" id="index.hXUjr" title="原文 : Uninstall Ingress Controller">イングレス・コントローラのアンインストール</span></h3>
+<p><span class="merged" id="index.24Pvqi.spl1" title="原文 : Uninstall Ingress Controller uses the helm uninstall command to remove all the ingress resources and uninstall the ingress controller."><code>Uninstall Ingress Controller</code>は、<code>helm uninstall</code>コマンドを使用してすべてのイングレス・リソースを削除し、イングレス・コントローラをアンインストールします。</span> <span class="merged" id="index.24Pvqi.spl2" title="原文 : In addition, you can choose whether to also delete the corresponding namespace.">また、対応するネームスペースを削除するかどうかも選択できます。</span> <span class="merged" id="index.24Pvqi.spl3" title="原文 : You access these actions by using the Uninstall Ingress Controller button on the Ingress Controller page or the Go &gt; Uninstall Ingress Controller menu item.">これらのアクションにアクセスするには、<code>Ingress Controller</code>ページまたは<code>Go</code> > <code>Uninstall Ingress Controller</code>メニュー・アイテムにある<code>Uninstall Ingress Controller</code>ボタンを使用します。</span> </p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../k8s-weblogic-domain/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../../verrazzano/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1667188184"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1667188184"></script>
+    <script src="../../../js/jquery.sticky.js?1667188184"></script>
+    <script src="../../../js/featherlight.min.js?1667188184"></script>
+    <script src="../../../js/highlight.pack.js?1667188184"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1667188184"></script>
+    <script src="../../../js/learn.js?1667188184"></script>
+    <script src="../../../js/hugo-learn.js?1667188184"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1667188184"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
