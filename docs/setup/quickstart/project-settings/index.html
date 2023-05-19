@@ -1,0 +1,2183 @@
+<!DOCTYPE html>
+<html lang="ja" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.88.1" />
+    <meta content="" name="description">
+
+
+    <link rel="icon" href="../../../images/favicon.png" type="image/png">
+
+    <title>プロジェクト設定の選択 :: WebLogic Kubernetes Toolkit UI</title>
+
+    
+    <link href="../../../css/nucleus.css?1684120866" rel="stylesheet">
+    <link href="../../../css/fontawesome-all.min.css?1684120866" rel="stylesheet">
+    <link href="../../../css/hybrid.css?1684120866" rel="stylesheet">
+    <link href="../../../css/featherlight.min.css?1684120866" rel="stylesheet">
+    <link href="../../../css/perfect-scrollbar.min.css?1684120866" rel="stylesheet">
+    <link href="../../../css/auto-complete.css?1684120866" rel="stylesheet">
+    <link href="../../../css/atom-one-dark-reasonable.css?1684120866" rel="stylesheet">
+    <link href="../../../css/theme.css?1684120866" rel="stylesheet">
+    <link href="../../../css/tabs.css?1684120866" rel="stylesheet">
+    <link href="../../../css/hugo-theme.css?1684120866" rel="stylesheet">
+    
+    <link href="../../../css/theme-wktui.css?1684120866" rel="stylesheet">
+
+    <script src="../../../js/jquery-3.3.1.min.js?1684120866"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+        :not(pre) > code + span.copy-to-clipboard {
+            display: none;
+        }
+      
+    </style>
+    
+  <meta HTTP-EQUIV="Content-Type" Content="text/html; charset=utf-8"></head>
+  <style type="text/css"> <!-- .merged:hover {text-decoration: underline;} --> </style>
+<body class="" data-url="/weblogic-toolkit-ui/setup/quickstart/project-settings/">
+    <nav id="sidebar" class="">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <span class="merged" id="index.cxBaP" title="原文 :  WebLogic Kubernetes Toolkit UI "><a href="https://oracle.github.io/weblogic-toolkit-ui" id="logo"> <img height="90" src="../../../images/logo.png"><br /> WebLogic Kubernetes Toolkit UI </a></span>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="../../../js/lunr.min.js?1684120866"></script>
+<script type="text/javascript" src="../../../js/auto-complete.js?1684120866"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/oracle.github.io\/weblogic-toolkit-ui";
+    
+</script>
+<script type="text/javascript" src="../../../js/search.js?1684120866"></script>
+
+    
+  </div>
+  
+    <section id="homelinks">
+      <ul>
+        <li>
+            <span class="merged" id="index.e8329"  title="原文::  Home"><a class="padding" href='https://oracle.github.io/weblogic-toolkit-ui'><i class='fas fa-home'></i> ホーム</a></span>
+        </li>
+      </ul>
+    </section>
+  
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/concepts/" title="WKT UIアプリケーションについて">
+      <span class="merged" id="index.3t7iAC" title="原文 :  About the WKT UI Application "><a href="../../../concepts/index.html"><b></b> WKT UIアプリケーションについて</a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/" title="開始">
+      <span class="merged" id="index.G2FBK"  title="原文::  Get Started "><a href="../../index.html"> <b> </b>開始 </a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/prerequisites/" title="前提条件">
+        <span class="merged" id="index.3SDKYY"  title="原文::  Prerequisites "><a href="../../prerequisites/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/install/" title="WKT UIのインストール">
+        <span class="merged" id="index.4avNBc" title="原文 :  Install WKT UI "><a href="../../install/index.html">WKT UIのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        parent
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/" title="クイック・スタート・ガイド">
+      <span class="merged" id="index.2auR82"  title="原文::  Quick Start Guide "><a href="../index.html"> <b> </b>クイック・スタート・ガイド </a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/prereqs/" title="前提条件">
+        <span class="merged" id="index.3Ahm0"  title="原文::  Prerequisites "><a href="../prereqs/index.html"> 前提条件 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/get-todo-app/" title="ToDo Listサンプル・アプリケーションの取得">
+        <span class="merged" id="index.2zfYAl" title="原文 :  Get the ToDo List sample application "><a href="../get-todo-app/index.html">ToDo Listサンプル・アプリケーションの取得</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/set-up-wktui-app/" title="WKTUIアプリケーションの設定">
+        <span class="merged" id="index.1qL3dm" title="原文 :  Set up the WKTUI application "><a href="../set-up-wktui-app/index.html">WKTUIアプリケーションの設定</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item active" data-nav-id="/weblogic-toolkit-ui/setup/quickstart/project-settings/" title="プロジェクト設定の選択">
+        <span class="merged" id="index.3f32MG" title="原文 :  Select the Project Settings "><a href="index.html">プロジェクト設定の選択</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/create-wdt-model/" title="WebLogic Deploy Toolingモデルの作成">
+        <span class="merged" id="index.30ujbv" title="原文 :  Create the WebLogic Deploy Tooling model "><a href="../create-wdt-model/index.html">WebLogic Deploy Toolingモデルの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/create-images-with-wit/" title="WebLogic Image Toolを使用したイメージの作成">
+        <span class="merged" id="index.ichNf" title="原文 :  Create images with the WebLogic Image Tool "><a href="../create-images-with-wit/index.html">WebLogic Image Toolを使用したイメージの作成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/" title="WebLogic Kubernetes Operator">
+      <span class="merged" id="index.3neRUs"  title="原文::  WebLogic Kubernetes Operator "><a href="../qs-kubernetes/index.html"> <b> </b>WebLogic Kubernetes Operator </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/k8s-client-config/" title="Kubernetesクラスタ接続の構成">
+        <span class="merged" id="index.3XY26" title="原文 :  Configure Kubernetes Cluster Connectivity "><a href="../qs-kubernetes/k8s-client-config/index.html">Kubernetesクラスタ接続の構成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/k8s-wko/" title="WebLogic Kubernetes Operatorのインストール">
+        <span class="merged" id="index.4JlPBo" title="原文 :  Install the WebLogic Kubernetes Operator "><a href="../qs-kubernetes/k8s-wko/index.html">WebLogic Kubernetes Operatorのインストール</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/k8s-weblogic-domain/" title="ドメインのデプロイ">
+        <span class="merged" id="index.2aSe6Y" title="原文 :  Deploy the Domain "><a href="../qs-kubernetes/k8s-weblogic-domain/index.html">ドメインのデプロイ</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/k8s-ingress-controller/" title="イングレス・コントローラのインストールおよび構成">
+        <span class="merged" id="index.2mSWGi" title="原文 :  Install and Configure the Ingress Controller "><a href="../qs-kubernetes/k8s-ingress-controller/index.html">イングレス・コントローラのインストールおよび構成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-kubernetes/k8s-access-app/" title="ToDo Listアプリケーションへのアクセス">
+        <span class="merged" id="index.118B8a"  title="原文:  Access the ToDo List application "><a href="../qs-kubernetes/k8s-access-app/index.html"> ToDo Listアプリケーションにアクセスします </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.1yiiWn"  title="原文::  Verrazzano "><a href="../qs-verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/vz-client-config/" title="Kubernetesクラスタ接続の構成">
+        <span class="merged" id="index.4S9X4a" title="原文 :  Configure Kubernetes Cluster Connectivity "><a href="../qs-verrazzano/vz-client-config/index.html">Kubernetesクラスタ接続の構成</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/vz-install/" title="Verrazzanoのインストール">
+        <span class="merged" id="index.17w62l"  title="原文::  Install Verrazzano "><a href="../qs-verrazzano/vz-install/index.html"> Verrazzanoのインストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/vz-component/" title="WebLogicドメインのVerrazzanoコンポーネントのデプロイ">
+        <span class="merged" id="index.3ue12L" title="原文 :  Deploy the Verrazzano Component for the WebLogic Domain "><a href="../qs-verrazzano/vz-component/index.html">WebLogicドメインのVerrazzanoコンポーネントのデプロイ</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/vz-application/" title="Verrazzanoアプリケーションのデプロイ">
+        <span class="merged" id="index.2sujao" title="原文 :  Deploy the Verrazzano Application "><a href="../qs-verrazzano/vz-application/index.html">Verrazzanoアプリケーションのデプロイ</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-verrazzano/vz-access-app/" title="ToDo Listアプリケーションへのアクセス">
+        <span class="merged" id="index.2QRmkt"  title="原文:  Access the ToDo List application "><a href="../qs-verrazzano/vz-access-app/index.html"> ToDo Listアプリケーションにアクセスします </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-summary/" title="サマリー">
+      <span class="merged" id="index.1QLn3H"  title="原文::  Summary "><a href="../qs-summary/index.html"> <b> </b>サマリー </a></span>
+      
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-advanced/" title="詳細">
+      <span class="merged" id="index.DuBzl"  title="原文::  Advanced "><a href="../qs-advanced/index.html"> <b> </b>拡張 </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-advanced/offline-discover/" title="オフライン検出">
+        <span class="merged" id="index.2MdyTK" title="原文 :  Offline Discover "><a href="../qs-advanced/offline-discover/index.html">オフライン検出</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/setup/quickstart/qs-advanced/online-remote-discover/" title="オンライン・リモート検出">
+        <span class="merged" id="index.400vAC" title="原文 :  Online Remote Discover "><a href="../qs-advanced/online-remote-discover/index.html">オンライン・リモート検出</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/" title="UIのナビゲート">
+      <span class="merged" id="index.1Fo7L5" title="原文 :  Navigate the UI "><a href="../../../navigate/index.html"><b></b> UIのナビゲート</a></span>
+      
+      
+        <ul>
+          
+          
+            
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/project-settings/" title="プロジェクトの設定">
+        <span class="merged" id="index.40A5dH"  title="原文::  Project Settings "><a href="../../../navigate/project-settings/index.html"> プロジェクトの設定 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/model/" title="モデル">
+        <span class="merged" id="index.6mtll"  title="原文::  Model "><a href="../../../navigate/model/index.html"> モデル </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/image/" title="イメージ">
+        <span class="merged" id="index.XaeIX"  title="原文::  Image "><a href="../../../navigate/image/index.html"> イメージ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/" title="Kubernetes">
+      <span class="merged" id="index.ynOkf"  title="原文::  Kubernetes "><a href="../../../navigate/kubernetes/index.html"> <b> </b>Kubernetes </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-client-config/" title="クライアント構成">
+        <span class="merged" id="index.3nEXiq"  title="原文::  Client Configuration "><a href="../../../navigate/kubernetes/k8s-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-wko/" title="WebLogic Kubernetes Operator">
+        <span class="merged" id="index.482TPn"  title="原文::  WebLogic Kubernetes Operator "><a href="../../../navigate/kubernetes/k8s-wko/index.html"> WebLogic Kubernetes Operator </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-weblogic-domain/" title="WebLogicドメイン">
+        <span class="merged" id="index.4aO7Rw"  title="原文::  WebLogic Domain "><a href="../../../navigate/kubernetes/k8s-weblogic-domain/index.html"> WebLogicドメイン </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/kubernetes/k8s-ingress-controller/" title="イングレス・コントローラ">
+        <span class="merged" id="index.1uacg6"  title="原文::  Ingress Controller "><a href="../../../navigate/kubernetes/k8s-ingress-controller/index.html"> イングレス・コントローラ </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/" title="Verrazzano">
+      <span class="merged" id="index.2A6Ir0"  title="原文::  Verrazzano "><a href="../../../navigate/verrazzano/index.html"> <b> </b>Verrazzano </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-client-config/" title="クライアント構成">
+        <span class="merged" id="index.3iPTV6"  title="原文::  Client Configuration "><a href="../../../navigate/verrazzano/vz-client-config/index.html"> クライアント構成 </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-install/" title="インストール">
+        <span class="merged" id="index.3q9eME"  title="原文::  Installation "><a href="../../../navigate/verrazzano/vz-install/index.html"> インストール </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-component/" title="コンポーネント">
+        <span class="merged" id="index.4VYgAK" title="原文 :  Component "><a href="../../../navigate/verrazzano/vz-component/index.html"> コンポーネント </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/navigate/verrazzano/vz-application/" title="アプリケーション">
+        <span class="merged" id="index.4VaqP7"  title="原文::  Application "><a href="../../../navigate/verrazzano/vz-application/index.html"> アプリケーション </a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/developer/" title="開発者ガイド">
+      <span class="merged" id="index.3e9Cuh"  title="原文::  Developer Guide "><a href="../../../developer/index.html"> <b> </b>開発者ガイド </a></span>
+      
+      
+    </li>
+  
+ 
+
+          
+          
+
+
+
+
+ 
+  
+    
+    <li class="dd-item
+        
+        
+        
+        " data-nav-id="/weblogic-toolkit-ui/release/" title="リリース・ノート">
+      <span class="merged" id="index.42UaWa"  title="原文::  Release Notes "><a href="../../../release/index.html"> <b> </b>リリース・ノート </a></span>
+      
+      
+        <ul>
+          
+          
+          
+
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.5.1/" title="リリース1.5.1">
+        <span class="merged" id="index.puPnZ" title="原文 :  Release 1.5.1 "><a href="../../../release/release-1.5.1/index.html"><b></b>リリース1.5.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.5.0/" title="リリース1.5.0">
+        <span class="merged" id="index.GyS13" title="原文 :  Release 1.5.0 "><a href="../../../release/release-1.5.0/index.html"><b></b>リリース1.5.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.4.1/" title="リリース1.4.1">
+        <span class="merged" id="index.32UAVs" title="原文 :  Release 1.4.1 "><a href="../../../release/release-1.4.1/index.html"><b></b>リリース1.4.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.4.0/" title="リリース1.4.0">
+        <span class="merged" id="index.2RL7aO" title="原文 :  Release 1.4.0 "><a href="../../../release/release-1.4.0/index.html"><b></b>リリース1.4.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.3.0/" title="リリース1.3.0">
+        <span class="merged" id="index.2N3hwz" title="原文 :  Release 1.3.0 "><a href="../../../release/release-1.3.0/index.html"><b></b>リリース1.3.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.2.0/" title="リリース1.2.0">
+        <span class="merged" id="index.BccHo" title="原文 :  Release 1.2.0 "><a href="../../../release/release-1.2.0/index.html"><b></b>リリース1.2.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.1/" title="リリース1.1.1">
+        <span class="merged" id="index.21noUk"  title="原文::  Release 1.1.1 "><a href="../../../release/release-1.1.1/index.html"><b></b>リリース1.1.1</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li class="dd-item " data-nav-id="/weblogic-toolkit-ui/release/release-1.1.0/" title="リリース1.1.0">
+        <span class="merged" id="index.1kxXDU" title="原文 :  Release 1.1.0 "><a href="../../../release/release-1.1.0/index.html">リリース1.1.0</a></span>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+      
+    </li>
+  
+ 
+
+          
+        
+    </ul>
+
+    
+    
+
+    
+    <section id="footer">
+      <p><span class="merged" id="index.4behA5" title="原文 : Created with from Oracle"><a href="https://www.oracle.com">Oracle</a>から<i class="fas fa-heart"></i>で作成</span></p>
+<p><span class="merged" id="index.1OQYZy"  title="原文:: &nbsp">&nbsp</span></p>
+<p><span class="merged" id="index.31YtZS" title="原文 :  GitHub repo"><a href="https://github.com/oracle/weblogic-toolkit-ui"><i class="fab fa-github"></i>GitHubリポジトリ</a></span></p>
+<p><span class="merged" id="index.3Vj3Ms" title="原文 :  Public Slack #weblogic"><a href="https://join.slack.com/t/oracle-weblogic/shared_invite/zt-1ni1gtjv6-PGC6CQ4uIte3KBdm_67~aQ"><i class="fab fa-slack"></i>パブリックSlack #weblogic</a></span></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span class="merged" id="index.3KYHTV" title="原文 :  &gt; Get Started &gt; Quick Start Guide &gt; Select the Project Settings "><span id="sidebar-toggle-span"><a data-sidebar-toggle="" href="index.html#" id="sidebar-toggle"><i class="fas fa-bars"></i></a></span> <span id="toc-menu"><i class="fas fa-list-alt"></i></span> <span class="links"><a href='../../../index.html'></a> > <a href='../../index.html'>開始</a> > <a href='../index.html'>クイック・スタート・ガイド</a> > プロジェクト設定の選択</span></span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+        <li><span class="merged" id="index.3ZwTf6" title="原文 : Storing the Project Credentials"><a href="index.html#storing-the-project-credentials">プロジェクト資格証明の格納</a></span></li>
+        <li><span class="merged" id="index.1hTiz1" title="原文 : Oracle Fusion Middleware Domain Target Location"><a href="index.html#oracle-fusion-middleware-domain-target-location">Oracle Fusion Middlewareドメイン・ターゲットのロケーション</a></span></li>
+        <li><span class="merged" id="index.1NCVmw" title="原文 : Kubernetes Cluster Target Type"><a href="index.html#kubernetes-cluster-target-type">Kubernetesクラスタ・ターゲット・タイプ</a></span></li>
+        <li><span class="merged" id="index.2WSg0a" title="原文 : Java Installation"><a href="index.html#java-installation">Javaインストール</a></span></li>
+        <li><span class="merged" id="index.1Veboh" title="原文 : Oracle Fusion Middleware Installation"><a href="index.html#oracle-fusion-middleware-installation">Oracle Fusion Middlewareインストール</a></span></li>
+        <li><span class="merged" id="index.4GU4kd" title="原文 : Image Builder Tool"><a href="index.html#image-builder-tool">イメージ・ビルダー・ツール</a></span></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <div style="width:100%"> <div title="免責事項: ここに記載されているドキュメントは、お客様の利便性のために翻訳ソフトウエアにより機械的に翻訳(機械翻訳)したものです。オリジナルの英語版もあわせてご確認ください。" style="width:150px;padding-left:5px;padding-right:5px;border:#ff0000 solid 1px;border-color: gray;font-size: small;color:gray;margin: 0 auto 0 auto;text-align:center"><a href="https://docs.oracle.com/cd/E85181_01/mt_disclaimer.html">機械翻訳について</a></div> </div>
+<h1>
+              
+              <span class="merged" id="index.1ZSPkK" title="原文 : Select the Project Settings">プロジェクト設定の選択</span>
+            </h1>
+          
+
+        
+
+
+<ol>
+<li>
+<p><span class="merged" id="index.2itl6x" title="原文 : Start WKTUI.">WKTUIを起動します。</span></p>
+<p><span class="merged" id="index.45eWB6.spl1" title="原文 : WKTUI uses the concept of a project that is like a project in an Integrated Development Environment (IDE).">WKTUIでは、統合開発環境(IDE)のプロジェクトのようなプロジェクトの概念を使用します。</span> <span class="merged" id="index.45eWB6.spl2" title="原文 : You will create a new project.">新しいプロジェクトを作成します。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.eqE0I" title="原文 : Using the File menu, select New Project, choose a directory, and enter the file name todo-list.wktproj."><code>File</code>メニューを使用して、<code>New Project</code>を選択し、ディレクトリを選択して、ファイル名<code>todo-list.wktproj</code>を入力します。</span></p>
+<p><span class="merged" id="index.r59e7" title="原文 : At this point, you will be on the Project Settings page that will look something like the one shown in the following image.">この時点で、次のイメージに示すような<code>Project Settings</code>ページが表示されます。</span></p>
+<p><span class="merged" id="index.3vluUm" title="原文 : Note: If you are not running on macOS, you will not see this top-most panel: For macOS, do you need to add directories to the PATH or define other environment variables for Docker/Podman or Kubernetes?"><strong>ノート</strong>: macOSで実行していない場合、この最上位パネルは表示されません: macOSの場合、PATHにディレクトリを追加するか、Docker/PodmanまたはKubernetesに他の環境変数を定義する必要がありますか。</span></p>
+<img alt="プロジェクトの設定" src="../../../images/project-settings.png">
+</li>
+</ol>
+<h4 id="extra-environment-settings-macos-only"><span class="merged" id="index.1TVd2l" title="原文 : Extra Environment Settings (macOS only)">その他の環境設定(macOSのみ)</span></h4>
+<p><span class="merged" id="index.m2Amy.spl1" title="原文 : Unlike Windows or Linux, applications on macOS that are started from the Finder, Dock, or Launchpad, do not inherit the user’s environment.">WindowsやLinuxとは異なり、Finder、DockまたはLaunchpadから起動されるmacOS上のアプリケーションは、ユーザーの環境を継承しません。</span> <span class="merged" id="index.m2Amy.spl2" title="原文 : To see the environment that WKTUI inherits from the operating system, select Show System Path and Show System Environment.">WKTUIがオペレーティング・システムから継承する環境を表示するには、<code>Show System Path</code>および<code>Show System Environment</code>を選択します。</span> <span class="merged" id="index.m2Amy.spl3" title="原文 : For now, you will not add any extra environment settings.">ここでは、追加の環境設定は追加しません。</span> <span class="merged" id="index.m2Amy.spl4" title="原文 : Instead, you will return to add these if you encounter an error that requires them.">かわりに、必要なエラーが発生した場合は、これらを追加して戻ります。</span> </p>
+<h3 id="storing-the-project-credentials"><span class="merged" id="index.4AGFE3" title="原文 : Storing the Project Credentials">プロジェクト資格証明の格納</span></h3>
+<p><span class="merged" id="index.RVRRT.spl1" title="原文 : WKTUI realizes that different organizations and different projects have different security standards for storing credentials.">WKTUIでは、様々な組織および異なるプロジェクトで資格証明を格納するためのセキュリティ標準が異なることが認識されています。</span> <span class="merged" id="index.RVRRT.spl2" title="原文 : As such, you have three options in WKTUI for how to store a project’s credentials:">そのため、WKTUIにはプロジェクトの資格証明を格納する方法について、次の3つのオプションがあります:</span> </p>
+<ul>
+<li>
+<p><span class="merged" id="index.26vB2p.spl1" title="原文 : Store in the Native OS Credential Store - This option lets you store each credential field in a separate field in the operating system’s credential store (for example, Windows Credential Manager, macOS Keychain)."><code>Store in the Native OS Credential Store</code> - このオプションを使用すると、各資格証明フィールドをオペレーティング・システムの資格証明ストア内の個別のフィールドに格納できます(Windows資格証明マネージャ、macOSキー・チェーンなど)。</span> <span class="merged" id="index.26vB2p.spl2" title="原文 : When using this option, the project file stores only an indicator for each field stored in the credential store.">このオプションを使用する場合、プロジェクト・ファイルには、資格証明ストアに格納されている各フィールドのインジケータのみが格納されます。</span> <span class="merged" id="index.26vB2p.spl3" title="原文 : When the project is opened, WKTUI tries to load each credential from the credential store into memory.">プロジェクトを開くと、WKTUIは資格証明ストアからメモリーに各資格証明をロードしようとします。</span> <span class="merged" id="index.26vB2p.spl4" title="原文 : When the project is saved, WKTUI writes each credential field with a value to the credential store and updates the markers in the project file.">プロジェクトが保存されると、WKTUIは値を持つ各資格証明フィールドを資格証明ストアに書き込み、プロジェクト・ファイル内のマーカーを更新します。</span> <span class="merged" id="index.26vB2p.spl5" title="原文 : With this option, you have a secure means of storing your credentials on the local machine.">このオプションを使用すると、ローカル・マシンに資格証明をセキュアに格納できます。</span> <span class="merged" id="index.26vB2p.spl6" title="原文 : If you try to open the project on a new machine, the credentials will not be found so you will need to re-enter them.">新しいマシンでプロジェクトを開こうとすると、資格証明が見つからないため、再入力する必要があります。</span> </p>
+<p><span class="merged" id="index.1wT0vs.spl1" title="原文 : NOTE: When opening a project in a new version of WKTUI, the operating system will likely prompt you for your login password to allow the application to access the credential in the credential store."><strong>ノート</strong>:&nbsp;WKTUIの新しいバージョンでプロジェクトを開くと、アプリケーションが資格証明ストア内の資格証明にアクセスできるように、オペレーティング・システムによってログイン・パスワードの入力が求められる可能性があります。</span> <span class="merged" id="index.1wT0vs.spl2" title="原文 : The tedious part is that the prompt is per credential, so if you have 15 credential fields, you will be prompted by the operating system to enter your password 15 times.">プロンプトは資格証明ごとであるため、15個の資格証明フィールドがある場合、オペレーティング・システムによってパスワードの入力が15回求められます。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.19T2CK.spl1" title="原文 : Store Encrypted in Project File - This option lets you store the credentials directly in the project file."><code>Store Encrypted in Project File</code> - このオプションを使用すると、資格証明をプロジェクト・ファイルに直接格納できます。</span> <span class="merged" id="index.19T2CK.spl2" title="原文 : WKTUI encrypts each credential field using a passphrase that you provide and modern AES 256 bit encryption algorithms and techniques.">WKTUIでは、指定したパスフレーズと最新のAES 256ビット暗号化アルゴリズムおよび手法を使用して、各資格証明フィールドが暗号化されます。</span> <span class="merged" id="index.19T2CK.spl3" title="原文 : On opening the project, WKTUI will prompt you for the encryption passphrase to use to decrypt the credential fields loaded into memory.">プロジェクトを開くと、WKTUIによって、メモリーにロードされる資格証明フィールドの復号化に使用する暗号化パスフレーズの入力が求められます。</span> <span class="merged" id="index.19T2CK.spl4" title="原文 : If you remember the encryption passphrase, you can easily move the project files from machine to machine without losing the project credentials.">暗号化パスフレーズを覚えている場合は、プロジェクト資格証明を失うことなく、プロジェクト・ファイルをマシンからマシンに簡単に移動できます。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.2A6xEK.spl1" title="原文 : None - This option is the most secure in that the credentials are never stored."><code>None</code> - このオプションは、資格証明が格納されないという点で、最も安全です。</span> <span class="merged" id="index.2A6xEK.spl2" title="原文 : Of course, this means that you must re-enter the credentials every time you open the project.">つまり、プロジェクトを開くたびに資格証明を再入力する必要があります。</span> </p>
+</li>
+</ul>
+<p><span class="merged" id="index.1MxJ0M" title="原文 : For this project, you will choose the Store Encrypted in Project File option to make it easier on readers running on Linux.">このプロジェクトでは、<code>Store Encrypted in Project File</code>オプションを選択して、Linuxで実行されているリーダーで簡単に実行できるようにします。</span></p>
+<h3 id="oracle-fusion-middleware-domain-target-location"><span class="merged" id="index.29Axq5" title="原文 : Oracle Fusion Middleware Domain Target Location">Oracle Fusion Middlewareドメイン・ターゲットのロケーション</span></h3>
+<p><span class="merged" id="index.8G6TN" title="原文 : WebLogic Kubernetes Operator (WKO) has three mechanisms for storing the WebLogic domain directory for use in Kubernetes:">WebLogic Kubernetes Operator (WKO)には、Kubernetesで使用するために、WebLogicドメイン・ディレクトリを格納するための3つのメカニズムがあります:</span></p>
+<ul>
+<li>
+<p><span class="merged" id="index.2GLwGa.spl1" title="原文 : Created in the container from the model in the image - With this option, you provide a WebLogic Deploy Tooling (WDT) model of the domain and a WDT installer in an image, and the WebLogic Kubernetes Operator will create and update the domain for you."><code>Created in the container from the model in the image</code> - このオプションでは、ドメインのWebLogic Deploy Tooling (WDT)モデルとイメージ内のWDTインストーラを指定すると、WebLogic Kubernetes Operatorによってドメインが作成され、自動的に更新されます。</span> <span class="merged" id="index.2GLwGa.spl2" title="原文 : This option is also called Model-in-Image (MII) and WKO calls it FromModel.">このオプションはModel-in-Image (MII)とも呼ばれ、WKOはFromModelをコールします。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.1l1UO2.spl1" title="原文 : Created as part of the image - With this option, you provide a WebLogic Deploy Tooling (WDT) model of the domain and a WDT installer to the WebLogic Image Tool (WIT) while creating the image, and WIT creates the domain inside the image."><code>Created as part of the image</code> - このオプションでは、イメージの作成時にドメインのWebLogic Deploy Tooling (WDT)モデルとWDTインストーラをWebLogic Image Tool (WIT)に提供し、WITはイメージ内にドメインを作成します。</span> <span class="merged" id="index.1l1UO2.spl2" title="原文 : This option is also called Domain-in-Image (DII) and WKO calls it Image.">このオプションはDomain-in-Image (DII)とも呼ばれ、WKOがImageをコールします。</span> <span class="merged" id="index.1l1UO2.spl3" title="原文 : NOTE: WKO has deprecated this option."><strong>ノート</strong>:&nbsp;WKOはこのオプションを推奨していません。</span> </p>
+</li>
+<li>
+<p><span class="merged" id="index.1q9gwV.spl1" title="原文 : Externally created in a Kubernetes persistent volume - With this option, you must create a Kubernetes persistent volume and create the domain on that persistent volume."><code>Externally created in a Kubernetes persistent volume</code> - このオプションでは、Kubernetes永続ボリュームを作成し、その永続ボリュームにドメインを作成する必要があります。</span> <span class="merged" id="index.1q9gwV.spl2" title="原文 : This option is also called Domain-on-PV (DoPV) and WKO calls it PersistentVolume.">このオプションはDomain-on-PV (DoPV)とも呼ばれ、WKOはこれをPersistentVolumeと呼びます。</span> </p>
+</li>
+</ul>
+<p><span class="merged" id="index.20MvcN" title="原文 : The ToDo List application requires only WebLogic Server and fits well with the Model-in-Image mechanism, so select Created in the container from the model in the image.">ToDoリスト・アプリケーションに必要なのはWebLogic Serverのみで、Model-in-Imageメカニズムと適合するため、<code>Created in the container from the model in the image</code>を選択します。</span></p>
+<h3 id="kubernetes-cluster-target-type"><span class="merged" id="index.3HPhj6" title="原文 : Kubernetes Cluster Target Type">Kubernetesクラスタ・ターゲット・タイプ</span></h3>
+<p><span class="merged" id="index.2IAyy0.spl1" title="原文 : This is where you must choose whether to deploy directly using a Kubernetes cluster, where you install WebLogic Kubernetes Operator and an Ingress controller, or to deploy to Verrazzano.">ここで、Kubernetesクラスタを使用して直接デプロイするか、<code>WebLogic Kubernetes Operator</code>およびイングレス・コントローラをインストールするか、<code>Verrazzano</code>にデプロイするかを選択する必要があります。</span> <span class="merged" id="index.2IAyy0.spl2" title="原文 : Because the Quick Start guide covers both tracks, choose the option that matches the track you plan to follow.">クイックスタート・ガイドは両方のトラックをカバーしているため、従う予定のトラックに一致するオプションを選択します。</span> </p>
+<h3 id="java-installation"><span class="merged" id="index.3gBIyS" title="原文 : Java Installation">Javaインストール</span></h3>
+<p><span class="merged" id="index.3zLbLg.spl1" title="原文 : You need to tell WKTUI which Java installation to use when running actions that require the WebLogic Deploy Tooling or WebLogic Image Tool.">WebLogic Deploy ToolingまたはWebLogic Image Toolを必要とするアクションの実行時に使用するJavaインストールをWKTUIに指示する必要があります。</span> <span class="merged" id="index.3zLbLg.spl2" title="原文 : For this project, choose the Java Home directory for your Oracle JDK 11 directory.">このプロジェクトでは、Oracle JDK 11ディレクトリのJavaホーム・ディレクトリを選択します。</span> </p>
+<h3 id="oracle-fusion-middleware-installation"><span class="merged" id="index.wSA4v" title="原文 : Oracle Fusion Middleware Installation">Oracle Fusion Middlewareインストール</span></h3>
+<p><span class="merged" id="index.3fbAq7.spl1" title="原文 : Running the WebLogic Deploy Tooling requires an Oracle Home directory.">WebLogic Deploy Toolingを実行するには、Oracle Homeディレクトリが必要です。</span> <span class="merged" id="index.3fbAq7.spl2" title="原文 : As such, you must tell WKTUI which Oracle Home directory contains the Oracle Fusion Middleware software you plan to use.">そのため、使用する予定のOracle Fusion Middlewareソフトウェアが含まれているOracle HomeディレクトリをWKTUIに知らせる必要があります。</span> <span class="merged" id="index.3fbAq7.spl3" title="原文 : Because this project uses WebLogic Server (WLS) 14.1.1, set this field to the directory containing your WLS 14.1.1 installation.">このプロジェクトではWebLogic Server (WLS) 14.1.1が使用されているため、このフィールドをWLS 14.1.1インストールを含むディレクトリに設定します。</span> </p>
+<h3 id="image-builder-tool"><span class="merged" id="index.44zJDU" title="原文 : Image Builder Tool">イメージ・ビルダー・ツール</span></h3>
+<p><span class="merged" id="index.4fQKdO.spl1" title="原文 : Because you will be building an image as part of this project, you need to tell WKTUI whether you will use Docker or Podman to build your image.">このプロジェクトの一部としてイメージを作成するため、イメージの構築にDockerを使用するか、Podmanを使用するかをWKTUIに指示する必要があります。</span> <span class="merged" id="index.4fQKdO.spl2" title="原文 : You also need to provide the path to the executable that matches your selection.">選択内容に一致する実行可能ファイルへのパスも指定する必要があります。</span> <span class="merged" id="index.4fQKdO.spl3" title="原文 : Because you are running Rancher Desktop on macOS, you will select Docker and supply the Docker executable (for example, /Users/fred.jones/.rd/bin/docker).">macOSでRancher Desktopを実行しているため、Dockerを選択し、Docker実行可能ファイル(たとえば、<code>/Users/fred.jones/.rd/bin/docker</code>)を指定します。</span> <span class="merged" id="index.4fQKdO.spl4" title="原文 : Provide the answers that best fit your environment.">お客様の環境に最適な答えを提供します。</span> </p>
+<p><span class="merged" id="index.369cDd.spl1" title="原文 : Now that your project settings are mostly complete, use the File menu, Save All option to save the project before you move on to creating the model for your domain.">プロジェクト設定がほとんど完了したので、<code>File</code>メニューの<code>Save All</code>オプションを使用してプロジェクトを保存してから、ドメイン用のモデルを作成してください。</span> <span class="merged" id="index.369cDd.spl2" title="原文 : WKTUI will prompt you for the encryption passphrase you want to use with this project.">WKTUIでは、このプロジェクトで使用する暗号化パスフレーズの入力を求められます。</span> <span class="merged" id="index.369cDd.spl3" title="原文 : Choose whatever value you like; just try not to forget it!">好きな値を選択してください。忘れないようにしてください。</span> </p>
+
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div>
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="../set-up-wktui-app/index.html" > <i class="fa fa-chevron-left"></i></a> <a class="nav nav-next" href="../create-wdt-model/index.html" style="margin-right: 0px;" ><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="../../../js/clipboard.min.js?1684120866"></script>
+    <script src="../../../js/perfect-scrollbar.min.js?1684120866"></script>
+    <script src="../../../js/perfect-scrollbar.jquery.min.js?1684120866"></script>
+    <script src="../../../js/jquery.sticky.js?1684120866"></script>
+    <script src="../../../js/featherlight.min.js?1684120866"></script>
+    <script src="../../../js/highlight.pack.js?1684120866"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="../../../js/modernizr.custom-3.6.0.js?1684120866"></script>
+    <script src="../../../js/learn.js?1684120866"></script>
+    <script src="../../../js/hugo-learn.js?1684120866"></script>
+    
+        
+            <script src="../../../mermaid/mermaid.js?1684120866"></script>
+        
+        <script>
+            mermaid.initialize({ startOnLoad: true });
+        </script>
+    
+    
+
+  </body>
+</html>
